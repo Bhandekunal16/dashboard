@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Service = () => {
   return (
     <>
-      <div className="primary" style={{display:"flex", justifyContent:"center", padding: "2%"}}>
-        <div style={{ textAlign: "center", backgroundColor:"whitesmoke", height: "80vh", width: "80vw", borderRadius:"10px" }}>
+      <div className="primary" style={{display:"flex", justifyContent:"center", padding: "1%"}}>
+        <div style={{ textAlign: "center", backgroundColor:"whitesmoke", height: "100%", width: "100%", borderRadius:"10px" }}>
           <div className="service-item">
             <h2 style={{color:"skyBlue"}}>Web Development</h2>
             <p style={{color:"gray"}}>
