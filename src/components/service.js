@@ -5,7 +5,7 @@ const Service = () => {
   return (
     <>
       <div className="primary" style={{display:"flex", justifyContent:"center", padding: "2%"}}>
-        <div style={{ textAlign: "center", backgroundColor:"whitesmoke", height: "80vh", width: "60vw", borderRadius:"10px" }}>
+        <div style={{ textAlign: "center", backgroundColor:"whitesmoke", height: "80vh", width: "80vw", borderRadius:"10px" }}>
           <div className="service-item">
             <h2 style={{color:"skyBlue"}}>Web Development</h2>
             <p style={{color:"gray"}}>
@@ -107,13 +107,6 @@ const Service = () => {
             <p style={{color:"gray"}}>
               We specialize in developing mobile applications for both Android
               and iOS platforms.
-            </p>
-          </div>
-          <div className="service-item">
-            <h2 style={{color:"skyblue"}}>Digital Marketing</h2>
-            <p style={{color:"gray"}}>
-              Our digital marketing services include SEO, social media
-              marketing, and content marketing.
             </p>
           </div>
         </div>
