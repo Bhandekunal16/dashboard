@@ -2,8 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+
+
+  function time (){
+    const timing = new Date().getHours();
+
+    switch (true) {
+      case timing < 12:
+        return "good morning"
+      case timing < 17:
+        return "good afternoon"
+  
+      case timing < 20:
+        return  "good evening"
+  
+      case timing < 24:
+        return "good night"
+    };
+  
+  }
+  
+
   return (
-    <div className="primary">
+    <div className="primary" onLoad={time()}>
       <div className="ui">
       <main className="ui-home">
         <h2>code-book</h2>
@@ -28,6 +49,8 @@ const Home = () => {
           <Link style={{color: "black", padding:"2%", textDecoration:"none"}} to="https://bhandekunal16.github.io/game/">Robotic</Link>
         </div>
       </div>
+
+      <h1></h1>
     </div>
   );
 };
