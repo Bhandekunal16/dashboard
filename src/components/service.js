@@ -59,7 +59,7 @@ const Service = () => {
               <div>
                 <p>
                   <Link
-                    to=" https://bhandekunal16.github.io/time/"
+                    to="https://bhandekunal16.github.io/time/"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
                     time
@@ -67,7 +67,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to=" https://robotec-dashboard-1.vercel.app/"
+                    to="https://robotec-dashboard-1.vercel.app/"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
                     Live working web portal
@@ -75,29 +75,27 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="  https://bhandekunal16.github.io/cube-finder/"
+                    to="https://bhandekunal16.github.io/cube-finder/"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
-                    {" "}
                     cube founder
                   </Link>
                 </p>
                 <p>
                   <Link
-                    to=" https://bhandekunal16.github.io/squre-root-finder/"
+                    to="https://bhandekunal16.github.io/squre-root-finder/"
                     style={{ textDecoration: "none", color: "#000" }}
                   >
-                    {" "}
                     square founder
                   </Link>
                 </p>
                 <p>
                   <Link
-                    to="  https://bhandekunal16.github.io/glowing-honey-comb-template/
+                    to="https://bhandekunal16.github.io/glowing-honey-comb-template/
       "
                     style={{ textDecoration: "none", color:"#000" }}
                   >
-                    {" "}
+
                     glowing cube design
                   </Link>
                 </p>
