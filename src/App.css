@@ -64,7 +64,6 @@
 }
 
 .primary{
-  text-align: center;
   height: 80vh;
 }
 
@@ -87,4 +86,27 @@
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+.ui-home{
+  background-color: whitesmoke;
+  height: 100%;
+  width: 90vw;
+  border-radius: 10px;
+}
+
+.ui-home p{
+  text-align: center;
+  color: #000;
+}
+
+.ui-home h2{
+  text-align: center;
+  color: #000;
+}
+
+.ui{
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
 }

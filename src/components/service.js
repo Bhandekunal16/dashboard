@@ -4,6 +4,7 @@ const Service = () => {
   return (
     <>
       <div className="primary">
+        <div style={{textAlign:"center"}}>
         <div className="service-item">
           <h2>Web Development</h2>
           <p>
@@ -24,6 +25,7 @@ const Service = () => {
             Our digital marketing services include SEO, social media marketing,
             and content marketing.
           </p>
+        </div>
         </div>
       </div>
     </>
