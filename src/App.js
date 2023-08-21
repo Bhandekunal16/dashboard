@@ -3,8 +3,6 @@ import Home from "./components/Home";
 import Layout from "./components/Layout/Layout";
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
   Routes,
   Route as RouteV6,
 } from "react-router-dom"; // Import Routes and Route from react-router-dom
