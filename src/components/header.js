@@ -5,7 +5,6 @@ function Header() {
 
   return (
     <div className="navbar">
-      <Link style={{color: "orange"}} to="https://bhandekunal16.github.io/game/">Robotic</Link>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/service">Service</Link>
