@@ -27,21 +27,21 @@ const About = () => {
   useEffect(() => {
     time();
   }, []);
-  
+
   return (
     <div style={{display: "flex", justifyContent:"center", padding:"2%"}}>
       <div style={{ textAlign: "center", backgroundColor: "whitesmoke", width : "90vw", height: "80vh", borderRadius:"10px" }}>
-        <h2>Our Company</h2>
-        <p>
+        <h2 style={{color: "skyblue"}}>Our Company</h2>
+        <p style={{color: "gray"}}>
           This is the About page where you can provide information about your
           company, organization, or yourself.
         </p>
-        <p>
+        <p style={{color: "gray"}}>
           Feel free to add details about your company's history, mission,
           vision, team members, or any other relevant information.
         </p>
-        <p>{new Date().toISOString()}</p>
-        <h1>{time()}</h1>
+        <p style={{color:"orange"}}>{new Date().toISOString()}</p>
+        <h1 style={{color:"orange"}}>{time()}</h1>
       </div>
     </div>
   );
