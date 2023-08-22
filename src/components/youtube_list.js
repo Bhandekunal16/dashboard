@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { fetchYoutubeData } from '../service/app-service'
+import { fetchYoutubeData } from '../service/app-service';
+import './youtubeList.css'; 
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchYoutubeData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/youtube/getCount1'); 
-      setData(apiData.data); // Assuming the array is apiData.data
+      const apiData = await fetchYoutubeData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/youtube/getCount1');
+      setData(apiData.data);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      setError('Error fetching data');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -18,23 +23,27 @@ const YoutubeList = () => {
   }, []);
 
   return (
-    <div style={{display:"flex", justifyContent:"center", backgroundColor:"whitesmoke"}}>
-      <table >
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(item => (
-            <tr key={item.Date}>
-              <td>{item.name}</td>
-              <td>{item.Date}</td>
+    <div className="youtube-list-container">
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {data.length > 0 && (
+        <table className="youtube-table">
+          <thead>
+            <tr>
+              <th>Video Name</th>
+              <th>Date Published</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map(item => (
+              <tr key={item.Date}>
+                <td>{item.name}</td>
+                <td>{item.Date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { fetchProjectData } from '../service/app-service'
+import { fetchProjectData } from '../service/app-service';
+import './ProjectList.css';
 
 const ProjectList = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchProjectData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getallproject'); 
-      setData(apiData.data); // Assuming the array is apiData.data
+      const apiData = await fetchProjectData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getallproject');
+      setData(apiData.data);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      setError('Error fetching data');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -18,25 +23,29 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <div style={{display:"flex", justifyContent:"center", backgroundColor:"whitesmoke"}}>
-      <table >
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>date</th>
-            <th>code</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map(item => (
-            <tr key={item.projectName}>
-              <td>{item.projectName}</td>
-              <td>{item.Date}</td>
-              <td>{item.codeIn}</td>
+    <div className="project-list-container">
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {data.length > 0 && (
+        <table className="project-table">
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Date</th>
+              <th>Code In</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map(item => (
+              <tr key={item.projectName}>
+                <td>{item.projectName}</td>
+                <td>{item.Date}</td>
+                <td>{item.codeIn}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

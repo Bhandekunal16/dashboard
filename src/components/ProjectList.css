@@ -1,0 +1,25 @@
+.project-list-container {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 20px;
+  }
+  
+  .project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .project-table th,
+  .project-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .project-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
