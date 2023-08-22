@@ -109,6 +109,10 @@ const Service = () => {
               and iOS platforms.
             </p>
           </div>
+          <div className="service-item">
+      <h2 style={{color:"skyblue"}}>Digital Marketing</h2>
+      <p style={{color:"gray"}}>Our digital marketing services include SEO, social media marketing, and content marketing.</p>
+    </div>
         </div>
       </div>
     </>
