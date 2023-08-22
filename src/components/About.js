@@ -1,6 +1,6 @@
 import React, { useEffect, useState }from "react";
 import { fetchData,fetchData2 } from '../service/app-service'
-import { json } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -68,7 +68,7 @@ const About = () => {
         </p>
         <p style={{color:"orange"}}>{new Date().toISOString()}</p>
         <h1 style={{color:"orange"}}>{time()}</h1>
-        <h1 style={{color: "gray"}}>Youtube vedio's : {JSON.stringify(data.data)}</h1>
+        <Link  to="/youtubeList" style={{color: "gray"}}>Youtube vedio's : {JSON.stringify(data.data)}</Link>
         <h1 style={{color: "gray"}}>project's count : {JSON.stringify(project.data)}</h1>
       </div>
     </div>
