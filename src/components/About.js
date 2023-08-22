@@ -1,9 +1,10 @@
 import React, { useEffect, useState }from "react";
-import { fetchData } from '../service/app-service'
+import { fetchData,fetchData2 } from '../service/app-service'
 import { json } from "react-router-dom";
 
 const About = () => {
   const [data, setData] = useState([]);
+  const [project, setProject] = useState([])
   function time() {
     const timing = new Date().getHours();
     let goodmorning="good morning"
@@ -35,6 +36,14 @@ const About = () => {
     }
   };
 
+  const fetchProject = async () => {
+    try {
+      const apiData = await fetchData2('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getCount'); 
+      setProject(apiData);      
+    } catch (error) {
+      return error
+    }
+  };
  
    
 
@@ -42,6 +51,7 @@ const About = () => {
   useEffect(() => {
     time();
     fetchDataFromAPI()
+    fetchProject()
   }, []);
 
   return (
@@ -58,7 +68,8 @@ const About = () => {
         </p>
         <p style={{color:"orange"}}>{new Date().toISOString()}</p>
         <h1 style={{color:"orange"}}>{time()}</h1>
-        <h1 style={{color: "gray"}}>Youtube vedio's :{JSON.stringify(data.data)}</h1>
+        <h1 style={{color: "gray"}}>Youtube vedio's : {JSON.stringify(data.data)}</h1>
+        <h1 style={{color: "gray"}}>project's count : {JSON.stringify(project.data)}</h1>
       </div>
     </div>
   );
