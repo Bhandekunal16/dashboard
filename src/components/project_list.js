@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchProjectData } from '../service/app-service';
 import './ProjectList.css';
 
+
 const ProjectList = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
