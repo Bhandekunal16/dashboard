@@ -18,19 +18,19 @@ const YoutubeList = () => {
   }, []);
 
   return (
-    <div style={{display:"flex", justifyContent:"center"}}>
+    <div style={{display:"flex", justifyContent:"center", backgroundColor:"whitesmoke"}}>
       <table >
         <thead>
           <tr>
             <th>Name</th>
-            <th>Type</th>
+            <th>date</th>
           </tr>
         </thead>
         <tbody>
           {data.map(item => (
             <tr key={item.Date}>
               <td>{item.name}</td>
-              <td>{item.type}</td>
+              <td>{item.Date}</td>
             </tr>
           ))}
         </tbody>
