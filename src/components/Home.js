@@ -33,6 +33,12 @@ const Home = () => {
           <Link style={{color: "coralBlue", padding:"1%", textDecoration:"none"}} to="https://bhandekunal16.github.io/game/">Robotic</Link>
         </div>
       </div>
+
+      <div style={{textAlign:"center"}} >
+        <p style={{color: "skyblue"}}>if you want to practice it's some tool's for you.</p>
+        <p><Link style={{color: "coralBlue", padding:"1%", textDecoration:"none"}} to="https://www.programiz.com/c-programming/online-compiler/">online c compiler from programiz.com</Link></p>
+        <p><Link  style={{color: "coralBlue", padding:"1%", textDecoration:"none"}} to="https://www.programiz.com/python-programming/online-compiler/">online python compiler from programiz.com</Link></p>
+      </div>
     </div>
   );
 };

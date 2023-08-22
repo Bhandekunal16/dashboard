@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footerContent">
-      <p>&copy; 2023 Your Website. All rights reserved.</p>
+      <h3 style={{color: "skyblue"}}>Robotic's</h3>
     </div>
   );
 };
