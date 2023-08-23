@@ -10,7 +10,7 @@ const ProjectList = () => {
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchProjectData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getallproject');
+      const apiData = await fetchProjectData('https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app/project/getallproject');
       setData(apiData.data);
     } catch (error) {
       setError('Error fetching data');

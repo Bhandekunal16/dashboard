@@ -3,7 +3,7 @@
 // Function to make a GET request to the API
 export const fetchData = async () => {
   try {
-    const response = await fetch(`https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/youtube/getCount1`); 
+    const response = await fetch(`https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app/youtube/getCount1`); 
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -17,7 +17,7 @@ export const fetchData = async () => {
 
 export const fetchData2 = async () => {
   try {
-    const response = await fetch(`https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getCount`); 
+    const response = await fetch(`https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app/project/getCount`); 
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -31,7 +31,7 @@ export const fetchData2 = async () => {
 
 export const fetchYoutubeData = async () => {
   try {
-    const response = await fetch(`https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/youtube/getAllYoutube`); 
+    const response = await fetch(`https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app/youtube/getAllYoutube`); 
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -45,7 +45,7 @@ export const fetchYoutubeData = async () => {
 
 export const fetchProjectData = async () => {
   try {
-    const response = await fetch(`https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/project/getallproject`); 
+    const response = await fetch(`https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app/project/getallproject`); 
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

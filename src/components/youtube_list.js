@@ -9,7 +9,7 @@ const YoutubeList = () => {
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchYoutubeData('https://robotec-dashboard-ajcy9ylf5-bhandekunal16.vercel.app/youtube/getCount1');
+      const apiData = await fetchYoutubeData('https://robotec-dashboard-orhqb0ql6-bhandekunal16.vercel.app//youtube/getCount1');
       setData(apiData.data);
     } catch (error) {
       setError('Error fetching data');
