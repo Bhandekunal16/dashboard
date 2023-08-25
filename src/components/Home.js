@@ -12,10 +12,6 @@ const Home = () => {
       <div className="ui">
       <main className="ui-home">
         <h2 style={{color:"skyblue"}}>code-book</h2>
-        <p style={{color: "gray"}}>
-          This is the main content of the home page. You can showcase your
-          featured content, products, or services here.
-        </p>
         <div style={{padding:"1%", color:"coralBlue"}}>
         <Link to="https://github.com/Bhandekunal16/Logic/tree/main/c" style={{textDecoration:"none", color:"black"}}>Introduction to C Programming Basics</Link>
         </div>
