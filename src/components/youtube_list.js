@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { fetchYoutubeData } from '../service/app-service';
-import './youtubeList.css'; 
+import { fetchYoutubeData } from "../service/app-service";
+import "./youtubeList.css";
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
@@ -9,10 +9,12 @@ const YoutubeList = () => {
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchYoutubeData('https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/youtube/getCount1');
+      const apiData = await fetchYoutubeData(
+        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/youtube/getCount1"
+      );
       setData(apiData.data);
     } catch (error) {
-      setError('Error fetching data');
+      setError("Error fetching data");
     } finally {
       setLoading(false);
     }
@@ -35,7 +37,7 @@ const YoutubeList = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
+            {data.map((item) => (
               <tr key={item.Date}>
                 <td>{item.name}</td>
                 <td>{item.Date}</td>

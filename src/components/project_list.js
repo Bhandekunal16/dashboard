@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { fetchProjectData } from '../service/app-service';
-import './ProjectList.css';
-
+import { fetchProjectData } from "../service/app-service";
+import "./ProjectList.css";
 
 const ProjectList = () => {
   const [data, setData] = useState([]);
@@ -10,10 +9,12 @@ const ProjectList = () => {
 
   const fetchDataFromAPI = async () => {
     try {
-      const apiData = await fetchProjectData('https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/project/getallproject');
+      const apiData = await fetchProjectData(
+        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/project/getallproject"
+      );
       setData(apiData.data);
     } catch (error) {
-      setError('Error fetching data');
+      setError("Error fetching data");
     } finally {
       setLoading(false);
     }
@@ -37,7 +38,7 @@ const ProjectList = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
+            {data.map((item) => (
               <tr key={item.projectName}>
                 <td>{item.projectName}</td>
                 <td>{item.Date}</td>

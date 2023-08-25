@@ -4,15 +4,26 @@ import { Link } from "react-router-dom";
 const Service = () => {
   return (
     <>
-      <div className="primary" style={{display:"flex", justifyContent:"center", padding: "1%"}}>
-        <div style={{ textAlign: "center", backgroundColor:"whitesmoke", height: "100%", width: "100%", borderRadius:"10px" }}>
+      <div
+        className="primary"
+        style={{ display: "flex", justifyContent: "center", padding: "1%" }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "whitesmoke",
+            height: "100%",
+            width: "100%",
+            borderRadius: "10px",
+          }}
+        >
           <div className="service-item">
-            <h2 style={{color:"skyBlue"}}>Web Development</h2>
-            <p style={{color:"gray"}}>
+            <h2 style={{ color: "skyBlue" }}>Web Development</h2>
+            <p style={{ color: "gray" }}>
               We offer professional web development services to build responsive
               and user-friendly websites.
             </p>
-            <div style={{ display: "flex", justifyContent: "space-evenly",  }}>
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
               <div>
                 <p>
                   <Link
@@ -93,9 +104,8 @@ const Service = () => {
                   <Link
                     to="https://bhandekunal16.github.io/glowing-honey-comb-template/
       "
-                    style={{ textDecoration: "none", color:"coralBlue" }}
+                    style={{ textDecoration: "none", color: "coralBlue" }}
                   >
-
                     glowing cube design
                   </Link>
                 </p>
@@ -103,16 +113,19 @@ const Service = () => {
             </div>
           </div>
           <div className="service-item">
-            <h2 style={{color:"skyblue"}}>Mobile App Development</h2>
-            <p style={{color:"gray"}}>
+            <h2 style={{ color: "skyblue" }}>Mobile App Development</h2>
+            <p style={{ color: "gray" }}>
               We specialize in developing mobile applications for both Android
               and iOS platforms.
             </p>
           </div>
           <div className="service-item">
-      <h2 style={{color:"skyblue"}}>Digital Marketing</h2>
-      <p style={{color:"gray"}}>Our digital marketing services include SEO, social media marketing, and content marketing.</p>
-    </div>
+            <h2 style={{ color: "skyblue" }}>Digital Marketing</h2>
+            <p style={{ color: "gray" }}>
+              Our digital marketing services include SEO, social media
+              marketing, and content marketing.
+            </p>
+          </div>
         </div>
       </div>
     </>
