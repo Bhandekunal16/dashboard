@@ -11,6 +11,7 @@ import About from "./components/About";
 import Contact from "./components/contact";
 import YoutubeList from "./components/youtube_list";
 import ProjectList from "./components/project_list";
+import Dashboard from "./components/dashboard";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <div>
         <Layout>
           <Routes>
-            <RouteV6 path="/" element={<Home />} />
+            <RouteV6 path="/" element={<Dashboard />} />
+            <RouteV6 path="/home" element={<Home />} />
             <RouteV6 path="/about" element={<About />} />
             <RouteV6 path="/service" element={<Service />} />
             <RouteV6 path="/contact" element={<Contact />} />

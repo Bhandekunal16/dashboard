@@ -1,0 +1,15 @@
+.gradient-background {
+    background-image: linear-gradient(to bottom, #6e45e2, #88d3ce); 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+  }
+
+  .button{
+    background-color: skyblue;
+    color: black;
+    border-radius: 8px;
+    padding: 1%;
+  }
