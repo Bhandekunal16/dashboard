@@ -1,10 +1,8 @@
 .gradient-background {
     background-image: linear-gradient(to bottom, #6e45e2, #88d3ce); 
     height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white; 
+    text-align: center;
   }
 
   .button{
@@ -12,4 +10,17 @@
     color: black;
     border-radius: 8px;
     padding: 1%;
+    
+  }
+
+  .gradient-background svg {
+    pointer-events: none;
+    height: 40vh;
+    width:  40vw;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .gradient-background svg {
+      animation: App-logo-spin infinite 20s linear;
+    }
   }
