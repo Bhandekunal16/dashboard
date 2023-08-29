@@ -5,29 +5,21 @@ import { Link } from "react-router-dom";
 const About = () => {
   const [data, setData] = useState([]);
   const [project, setProject] = useState([]);
-  function time() {
+
+  function getTimeOfDay() {
     const timing = new Date().getHours();
-    let goodmorning = "Good morning";
-    let goodAfternoon = "Good afternoon";
-    let goodEvening = "Good evening";
-    let goodNight = "Good night";
 
-    switch (true) {
-      case timing < 12:
-        return goodmorning;
-      case timing < 17:
-        return goodAfternoon;
-
-      case timing < 20:
-        return goodEvening;
-
-      case timing < 24:
-        return goodNight;
-
-      default:
-        return null;
+    if (timing < 12) {
+      return "Good morning";
+    } else if (timing < 17) {
+      return "Good afternoon";
+    } else if (timing < 20) {
+      return "Good evening";
+    } else {
+      return "Good night";
     }
   }
+
   const fetchDataFromAPI = async () => {
     try {
       const apiData = await fetchData(
@@ -35,7 +27,7 @@ const About = () => {
       );
       setData(apiData);
     } catch (error) {
-      return error;
+      console.error(error);
     }
   };
 
@@ -46,53 +38,39 @@ const About = () => {
       );
       setProject(apiData);
     } catch (error) {
-      return error;
+      console.error(error);
     }
   };
 
   useEffect(() => {
-    time();
     fetchDataFromAPI();
     fetchProject();
   }, []);
 
   return (
-    <>
-    <div style={{ display: "flex", justifyContent: "center", padding: "2%" }}>
-      <div
-        style={{
-          textAlign: "center",
-          backgroundColor: "whitesmoke",
-          width: "90vw",
-          height: "40vh",
-          borderRadius: "10px",
-        }}
-      >
-        <h2 style={{ color: "skyblue" }}>About us</h2>
-        <p style={{ color: "orange" }}>{new Date().toISOString()}</p>
-        <h1 style={{ color: "orange" }}>{time()}</h1>
-        <div>
-          <Link to="/youtubeList" style={{ color: "gray", textDecoration:"none" }}>
-            Youtube vedio's : {JSON.stringify(data.data)}
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "2%" }}>
+      <div style={{ backgroundColor: "whitesmoke", width: "90vw", padding: "2%", borderRadius: "10px" }}>
+        <h2 style={{ color: "skyblue", marginBottom: "0.5rem" }}>About Us</h2>
+        <p style={{ color: "orange", marginBottom: "0.5rem" }}>{new Date().toISOString()}</p>
+        <h1 style={{ color: "orange", marginBottom: "1rem" }}>{getTimeOfDay()}</h1>
+        <div style={{ color: "gray", marginBottom: "1rem" }}>
+          <Link to="/youtubeList" style={{ textDecoration: "none" }}>
+            YouTube Videos: {JSON.stringify(data.data)}
           </Link>
         </div>
-        <div>
-          <Link to="/projectList" style={{ color: "gray",textDecoration:"none" }}>
-            Project's count : {JSON.stringify(project.data)}
+        <div style={{ color: "gray" }}>
+          <Link to="/projectList" style={{ textDecoration: "none" }}>
+            Projects Count: {JSON.stringify(project.data)}
           </Link>
         </div>
       </div>
-      
+
+      <div style={{ backgroundColor: "whitesmoke", width: "90vw", padding: "2%", borderRadius: "10px", marginTop: "2rem" }}>
+        <h1 style={{ textAlign: "center", color: "skyblue", marginBottom: "0.5rem" }}>Team</h1>
+        <p style={{ marginLeft: "10%", color: "gray" }}>Name: Kunal Eknath Bhande</p>
+        <p style={{ marginLeft: "10%", color: "gray" }}>Role: Backend/Frontend Lead & Project Management</p>
+      </div>
     </div>
-  <div style={{backgroundColor: "whitesmoke",
-          width: "100vw",
-          height: "40vh",
-          borderRadius: "10px",}}>
-    <h1 style={{textAlign:"center", color:"skyblue"}}>team</h1>
-    <p style={{marginLeft:"10%", color:"gray"}}>name : kunal eknath bhande</p>
-    <p style={{marginLeft:"10%", color:"gray"}}> work : backend/frontend lead & project management.</p>
-  </div>
-  </>
   );
 };
 
