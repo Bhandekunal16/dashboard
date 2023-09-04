@@ -19,7 +19,7 @@ const YoutubeList = () => {
       const apiData = response.data.data;
 
       // Check if data is empty or equals 0
-      if (apiData === null) {
+      if (apiData == null) {
         // Handle the case where data is empty
         Setmessage("No data available");
       } else {
@@ -41,7 +41,7 @@ const YoutubeList = () => {
     <div className="youtube-list-container">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {setmessage && <p>{setmessage}</p>}
+      {data.length == 0 && <p>{setmessage}</p>}
       {data.length > 0 && (
         <table className="youtube-table">
           <thead>
