@@ -48,11 +48,47 @@ const About = () => {
   }, []);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "2%" }}>
-      <div style={{ backgroundColor: "whitesmoke", width: "90vw", padding: "2%", borderRadius: "10px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "2%",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "whitesmoke",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+        }}
+      >
         <h2 style={{ color: "skyblue", marginBottom: "0.5rem" }}>About Us</h2>
-        <p style={{ color: "orange", marginBottom: "0.5rem" }}>{new Date().toISOString()}</p>
-        <h1 style={{ color: "orange", marginBottom: "1rem" }}>{getTimeOfDay()}</h1>
+        <p style={{ color: "orange", marginBottom: "0.5rem" }}>
+          {new Date().toISOString()}
+        </p>
+        <h1 style={{ color: "orange", marginBottom: "1rem" }}>
+          {getTimeOfDay()}
+        </h1>
+        <h3>
+          <Link
+            to="https://www.youtube.com/@R0b0tics-Devel0pment"
+            style={{ textDecoration: "none", color: "orange" }}
+          >
+            our YouTube channel
+          </Link>
+        </h3>
+
+        <h3>
+          <Link
+            to="https://www.instagram.com/roboticdevlopments01/?igshid=YTQwZjQ0NmI0OA%3D%3D"
+            style={{ textDecoration: "none", color: "orange" }}
+          >
+            our instagram handel
+          </Link>
+        </h3>
+
         <div style={{ color: "gray", marginBottom: "1rem" }}>
           <Link to="/youtubeList" style={{ textDecoration: "none" }}>
             YouTube Videos: {JSON.stringify(data.data)}
@@ -65,10 +101,30 @@ const About = () => {
         </div>
       </div>
 
-      <div style={{ backgroundColor: "whitesmoke", width: "90vw", padding: "2%", borderRadius: "10px", marginTop: "2rem" }}>
-        <h1 style={{ textAlign: "center", color: "skyblue", marginBottom: "0.5rem" }}>Team</h1>
-        <p style={{ marginLeft: "10%", color: "gray" }}>Name: Kunal Eknath Bhande</p>
-        <p style={{ marginLeft: "10%", color: "gray" }}>Role: Backend/Frontend Lead & Project Management</p>
+      <div
+        style={{
+          backgroundColor: "whitesmoke",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+          marginTop: "2rem",
+        }}
+      >
+        <h1
+          style={{
+            textAlign: "center",
+            color: "skyblue",
+            marginBottom: "0.5rem",
+          }}
+        >
+          Team
+        </h1>
+        <p style={{ marginLeft: "10%", color: "gray" }}>
+          Name: Kunal Eknath Bhande
+        </p>
+        <p style={{ marginLeft: "10%", color: "gray" }}>
+          Role: Backend/Frontend Lead & Project Management
+        </p>
       </div>
     </div>
   );
