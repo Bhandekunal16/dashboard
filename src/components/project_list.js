@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { fetchProjectData } from "../service/app-service";
 import "./ProjectList.css";
 import axios from "axios";
 
@@ -42,6 +41,7 @@ const ProjectList = () => {
     <div className="project-list-container">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
+      {setmessage && <p>{setmessage}</p>}
       {data.length > 0 && (
         <table className="project-table">
           <thead>

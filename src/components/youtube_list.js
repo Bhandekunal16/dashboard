@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { fetchYoutubeData } from "../service/app-service";
 import "./youtubeList.css";
 import axios from "axios";
 
@@ -41,7 +40,7 @@ const YoutubeList = () => {
     <div className="youtube-list-container">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {data.length == 0 && <p>{setmessage}</p>}
+      {setmessage && <p>{setmessage}</p>}
       {data.length > 0 && (
         <table className="youtube-table">
           <thead>
