@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
-import { environment } from "../env/environment";
+import { environment, method } from "../env/environment";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ const About = () => {
   const fetchDataFromAPI = async () => {
     try {
       const apiData = await fetchData(
-        `https://${environment.base_url}/youtube/getCount1`
+        `${method.http}://${environment.base_url}/youtube/getCount1`
       );
       setData(apiData);
     } catch (error) {
@@ -35,7 +35,7 @@ const About = () => {
   const fetchProject = async () => {
     try {
       const apiData = await fetchData2(
-        `https://${environment.base_url}/project/getCount`
+        `${method.http}://${environment.base_url}/project/getCount`
       );
       setProject(apiData);
     } catch (error) {
@@ -74,7 +74,7 @@ const About = () => {
         </h1>
         <h3>
           <Link
-            to={`https://${environment.Youtube}`}
+            to={`${method.http}://${environment.Youtube}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
             our YouTube channel
@@ -83,7 +83,7 @@ const About = () => {
 
         <h3>
           <Link
-            to={`https://${environment.inst}`}
+            to={`${method.http}://${environment.inst}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
             our instagram handel

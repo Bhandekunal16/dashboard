@@ -6,7 +6,7 @@ const Contact = () => {
   const [error, setError] = useState(null);
   const fetchDataFromAPI = async () => {
     try {
-      const response = await axios.post(`https://${environment.base_url}/get/ButtonUI`, {
+      const response = await axios.post(`${method.http}://${environment.base_url}/get/ButtonUI`, {
         data: `Send Email`,
       });
       console.log(response);
