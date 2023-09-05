@@ -74,7 +74,7 @@ const About = () => {
         </h1>
         <h3>
           <Link
-            to="https://www.youtube.com/@R0b0tics-Devel0pment"
+            to={`https://${environment.Youtube}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
             our YouTube channel
@@ -83,7 +83,7 @@ const About = () => {
 
         <h3>
           <Link
-            to="https://www.instagram.com/roboticdevlopments01/?igshid=YTQwZjQ0NmI0OA%3D%3D"
+            to={`https://${environment.inst}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
             our instagram handel
