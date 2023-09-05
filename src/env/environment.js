@@ -30,5 +30,5 @@ export const project = {
 };
 
 export const method = {
-    http: "https"
-}
+  http: "https",
+};
