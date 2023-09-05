@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { project } from "../env/environment";
 
 const Service = () => {
   return (
@@ -27,7 +28,7 @@ const Service = () => {
               <div>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/online-html-creator/"
+                    to={`https://${project.html_creator}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     online html creator
@@ -35,7 +36,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/html-routable-template/"
+                    to={`https://${project.html_routing}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     javascript base routing templates
@@ -43,7 +44,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/Web--application/"
+                    to={`https://${project.web_application}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     web page template
@@ -51,7 +52,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/binary-converter/"
+                    to={`https://${project.binary_converter}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     binary-converter
@@ -59,7 +60,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/Robotec-project/"
+                    to={`https://${project.robotic_project}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     mathematical calculator
@@ -70,7 +71,7 @@ const Service = () => {
               <div>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/time/"
+                    to={`https://${project.time}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     time
@@ -78,7 +79,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://robotec-dashboard-1.vercel.app/"
+                    to={`https://${project.robotec_dashboard}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     Live working web portal
@@ -86,7 +87,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/cube-finder/"
+                    to={`https://${project.cube_finder}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     cube founder
@@ -94,7 +95,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/squre-root-finder/"
+                    to={`https://${project.squre_finder}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     square founder
@@ -102,8 +103,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to="https://bhandekunal16.github.io/glowing-honey-comb-template/
-      "
+                    to={`https://${project.glowing}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     glowing cube design
