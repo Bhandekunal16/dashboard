@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-
+import { environment } from "../env/environment";
 const Contact = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const fetchDataFromAPI = async () => {
     try {
-      const response = await axios.post("https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/get/ButtonUI", {
+      const response = await axios.post(`https://${environment.base_url}/get/ButtonUI`, {
         data: `Send Email`,
       });
       console.log(response);

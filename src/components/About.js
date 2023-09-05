@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
+import { environment } from "../env/environment";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -23,7 +24,7 @@ const About = () => {
   const fetchDataFromAPI = async () => {
     try {
       const apiData = await fetchData(
-        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/youtube/getCount1"
+        `https://${environment.base_url}/youtube/getCount1`
       );
       setData(apiData);
     } catch (error) {
@@ -34,7 +35,7 @@ const About = () => {
   const fetchProject = async () => {
     try {
       const apiData = await fetchData2(
-        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/project/getCount"
+        `https://${environment.base_url}/project/getCount`
       );
       setProject(apiData);
     } catch (error) {

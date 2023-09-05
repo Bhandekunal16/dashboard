@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./youtubeList.css";
 import axios from "axios";
+import { environment } from "../env/environment";
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ const YoutubeList = () => {
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/youtube/getAllYoutube"
+        `https://${environment.base_url}/youtube/getAllYoutube`
       );
 
       console.log(response);

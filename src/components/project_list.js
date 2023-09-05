@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectList.css";
 import axios from "axios";
+import { environment } from "../env/environment";
 
 
 const ProjectList = () => {
@@ -12,7 +13,7 @@ const ProjectList = () => {
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/project/getallproject"
+        `https://${environment.base_url}/project/getallproject`
       );
 
       console.log(response);
