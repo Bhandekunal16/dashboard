@@ -23,7 +23,7 @@ const About = () => {
   const fetchDataFromAPI = async () => {
     try {
       const apiData = await fetchData(
-        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/youtube/getCount1"
+        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/youtube/getCount1"
       );
       setData(apiData);
     } catch (error) {
@@ -34,7 +34,7 @@ const About = () => {
   const fetchProject = async () => {
     try {
       const apiData = await fetchData2(
-        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/project/getCount"
+        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/project/getCount"
       );
       setProject(apiData);
     } catch (error) {

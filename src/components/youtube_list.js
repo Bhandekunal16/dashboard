@@ -11,7 +11,7 @@ const YoutubeList = () => {
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/youtube/getAllYoutube"
+        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/youtube/getAllYoutube"
       );
 
       console.log(response);

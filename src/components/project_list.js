@@ -12,7 +12,7 @@ const ProjectList = () => {
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        "https://robotec-dashboard-k3moev00e-bhandekunal16.vercel.app/project/getallproject"
+        "https://robotec-dashboard-7u265udaf-bhandekunal16.vercel.app/project/getallproject"
       );
 
       console.log(response);
