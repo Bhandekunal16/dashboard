@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { project } from "../env/environment";
+import { project, method } from "../env/environment";
 
 const Service = () => {
   return (
@@ -28,7 +28,7 @@ const Service = () => {
               <div>
                 <p>
                   <Link
-                    to={`https://${project.html_creator}`}
+                    to={`${method.http}://${project.html_creator}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     online html creator
@@ -36,7 +36,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.html_routing}`}
+                    to={`${method.http}://${project.html_routing}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     javascript base routing templates
@@ -44,7 +44,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.web_application}`}
+                    to={`${method.http}://${project.web_application}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     web page template
@@ -52,7 +52,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.binary_converter}`}
+                    to={`${method.http}://${project.binary_converter}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     binary-converter
@@ -60,7 +60,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.robotic_project}`}
+                    to={`${method.http}://${project.robotic_project}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     mathematical calculator
@@ -71,7 +71,7 @@ const Service = () => {
               <div>
                 <p>
                   <Link
-                    to={`https://${project.time}`}
+                    to={`${method.http}://${project.time}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     time
@@ -79,7 +79,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.robotec_dashboard}`}
+                    to={`${method.http}://${project.robotec_dashboard}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     Live working web portal
@@ -87,7 +87,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.cube_finder}`}
+                    to={`${method.http}://${project.cube_finder}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     cube founder
@@ -95,7 +95,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.squre_finder}`}
+                    to={`${method.http}://${project.squre_finder}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     square founder
@@ -103,7 +103,7 @@ const Service = () => {
                 </p>
                 <p>
                   <Link
-                    to={`https://${project.glowing}`}
+                    to={`${method.http}://${project.glowing}`}
                     style={{ textDecoration: "none", color: "coralBlue" }}
                   >
                     glowing cube design

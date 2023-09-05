@@ -28,3 +28,7 @@ export const project = {
   squre_finder: "bhandekunal16.github.io/squre-root-finder/",
   glowing: "bhandekunal16.github.io/glowing-honey-comb-template/",
 };
+
+export const method = {
+    http: "https"
+}
