@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { environment, game, programiz } from "../env/environment";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
           <h2 style={{ color: "skyblue" }}>code-book</h2>
           <div style={{ padding: "1%", color: "coralBlue" }}>
             <Link
-              to="https://github.com/Bhandekunal16/Logic/tree/main/c"
+              to={`https://${environment.c}`}
               style={{ textDecoration: "none", color: "black" }}
             >
               Introduction to C Programming Basics
@@ -17,7 +18,7 @@ const Home = () => {
           </div>
           <div style={{ padding: "1%", color: "coralBlue" }}>
             <Link
-              to="https://github.com/Bhandekunal16/Logic/tree/main/python"
+              to={`https://${environment.python}`}
               style={{ textDecoration: "none", color: "black" }}
             >
               Introduction to python Programming Basics
@@ -25,7 +26,7 @@ const Home = () => {
           </div>
           <div style={{ padding: "1%", color: "coralBlue" }}>
             <Link
-              to="https://github.com/Bhandekunal16/Logic/tree/main/javascript"
+              to={`https://${environment.javascript}`}
               style={{ textDecoration: "none", color: "black" }}
             >
               Introduction to javascript Programming Basics
@@ -42,7 +43,7 @@ const Home = () => {
               padding: "1%",
               textDecoration: "none",
             }}
-            to="https://bhandekunal16.github.io/game/"
+            to={`https://${game.tic_tac_tio}`}
           >
             Robotic
           </Link>
@@ -60,7 +61,7 @@ const Home = () => {
               padding: "1%",
               textDecoration: "none",
             }}
-            to="https://www.programiz.com/c-programming/online-compiler/"
+            to={`https://${programiz.c_compiler}`}
           >
             online c compiler from programiz.com
           </Link>
@@ -72,7 +73,7 @@ const Home = () => {
               padding: "1%",
               textDecoration: "none",
             }}
-            to="https://www.programiz.com/python-programming/online-compiler/"
+            to={`https://${programiz.python_compiler}`}
           >
             online python compiler from programiz.com
           </Link>
