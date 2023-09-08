@@ -60,6 +60,7 @@ const About = () => {
       <div
         style={{
           backgroundColor: "#333",
+          boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           width: "90vw",
           padding: "2%",
           borderRadius: "10px",
@@ -105,6 +106,7 @@ const About = () => {
       <div
         style={{
           backgroundColor: "#333",
+          boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
           width: "90vw",
           padding: "2%",
           borderRadius: "10px",

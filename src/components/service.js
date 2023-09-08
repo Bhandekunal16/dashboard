@@ -11,6 +11,7 @@ const Service = () => {
             textAlign: "center",
             backgroundColor: "#333",
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)"
           }}
         >
           <div className="service-item">
@@ -109,7 +110,7 @@ const Service = () => {
           </div>
           <div
             className="service-item"
-            style={{ backgroundColor: "#333", borderRadius: "10px" }}
+            style={{ backgroundColor: "#333", borderRadius: "10px",  boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)" }}
           >
             <h2 style={{ color: "skyblue" }}>Mobile App Development</h2>
             <p style={{ color: "orange" }}>
@@ -119,7 +120,7 @@ const Service = () => {
           </div>
           <div
             className="service-item"
-            style={{ backgroundColor: "#333", borderRadius: "10px" }}
+            style={{ backgroundColor: "#333", borderRadius: "10px" , boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)"}}
           >
             <h2 style={{ color: "skyblue" }}>Digital Marketing</h2>
             <p style={{ color: "orange" }}>
