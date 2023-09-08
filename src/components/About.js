@@ -59,7 +59,7 @@ const About = () => {
     >
       <div
         style={{
-          backgroundColor: "whitesmoke",
+          backgroundColor: "#333",
           width: "90vw",
           padding: "2%",
           borderRadius: "10px",
@@ -90,13 +90,13 @@ const About = () => {
           </Link>
         </h3>
 
-        <div style={{ color: "gray", marginBottom: "1rem" }}>
-          <Link to="/youtubeList" style={{ textDecoration: "none" }}>
+        <div style={{  marginBottom: "1rem" }}>
+          <Link to="/youtubeList" style={{ textDecoration: "none", color: "orange" }}>
             YouTube Videos: {JSON.stringify(data.data)}
           </Link>
         </div>
-        <div style={{ color: "gray" }}>
-          <Link to="/projectList" style={{ textDecoration: "none" }}>
+        <div>
+          <Link to="/projectList" style={{ textDecoration: "none", color: "orange"  }}>
             Projects Count: {JSON.stringify(project.data)}
           </Link>
         </div>
@@ -104,7 +104,7 @@ const About = () => {
 
       <div
         style={{
-          backgroundColor: "whitesmoke",
+          backgroundColor: "#333",
           width: "90vw",
           padding: "2%",
           borderRadius: "10px",
@@ -120,10 +120,10 @@ const About = () => {
         >
           Team
         </h1>
-        <p style={{ marginLeft: "10%", color: "gray" }}>
+        <p style={{ marginLeft: "10%", color: "orange" }}>
           Name: Kunal Eknath Bhande
         </p>
-        <p style={{ marginLeft: "10%", color: "gray" }}>
+        <p style={{ marginLeft: "10%", color: "orange" }}>
           Role: Backend/Frontend Lead & Project Management
         </p>
       </div>

@@ -66,9 +66,7 @@
 }
 
 
-.primary{
-  height: 80vh;
-}
+
 
 .contact-form {
   max-width: 400px;
@@ -85,7 +83,7 @@
 
 
 .ui-home{
-  background-color: whitesmoke;
+  background-color: #333;
   height: 100%;
   width: 90vw;
   border-radius: 10px;
@@ -93,12 +91,12 @@
 
 .ui-home p{
   text-align: center;
-  color: #000;
+  color: orange;
 }
 
 .ui-home h2{
   text-align: center;
-  color: #000;
+  color: skyblue;
 }
 
 .ui{

@@ -8,26 +8,26 @@ const Home = () => {
       <div className="ui">
         <main className="ui-home">
           <h2 style={{ color: "skyblue" }}>code-book</h2>
-          <div style={{ padding: "1%", color: "coralBlue" }}>
+          <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.c}`}
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "orange" }}
             >
               Introduction to C Programming Basics
             </Link>
           </div>
-          <div style={{ padding: "1%", color: "coralBlue" }}>
+          <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.python}`}
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "orange" }}
             >
               Introduction to python Programming Basics
             </Link>
           </div>
-          <div style={{ padding: "1%", color: "coralBlue" }}>
+          <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.javascript}`}
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "orange" }}
             >
               Introduction to javascript Programming Basics
             </Link>
@@ -39,7 +39,7 @@ const Home = () => {
           <h2 style={{ color: "skyblue" }}>game</h2>
           <Link
             style={{
-              color: "coralBlue",
+              color: "orange",
               padding: "1%",
               textDecoration: "none",
             }}
@@ -57,7 +57,7 @@ const Home = () => {
         <p>
           <Link
             style={{
-              color: "coralBlue",
+              color: "orange",
               padding: "1%",
               textDecoration: "none",
             }}
@@ -69,7 +69,7 @@ const Home = () => {
         <p>
           <Link
             style={{
-              color: "coralBlue",
+              color: "orange",
               padding: "1%",
               textDecoration: "none",
             }}
