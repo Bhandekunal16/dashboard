@@ -91,16 +91,49 @@ const About = () => {
           </Link>
         </h3>
 
-        <div style={{  marginBottom: "1rem" }}>
-          <Link to="/youtubeList" style={{ textDecoration: "none", color: "orange" }}>
+        <div style={{ marginBottom: "1rem" }}>
+          <Link
+            to="/youtubeList"
+            style={{ textDecoration: "none", color: "orange" }}
+          >
             YouTube Videos: {JSON.stringify(data.data)}
           </Link>
         </div>
         <div>
-          <Link to="/projectList" style={{ textDecoration: "none", color: "orange"  }}>
+          <Link
+            to="/projectList"
+            style={{ textDecoration: "none", color: "orange" }}
+          >
             Projects Count: {JSON.stringify(project.data)}
           </Link>
         </div>
+      </div>
+
+      <div
+        style={{
+          backgroundColor: "#333",
+          boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+          marginTop: "2rem",
+        }}
+      >
+        <h1
+          style={{
+            textAlign: "center",
+            color: "skyblue",
+            marginBottom: "0.5rem",
+          }}
+        >
+          Connect us on LinkedIn
+        </h1>
+        <Link
+          to="https://www.linkedin.com/in/kunal-bhande-2a0582271"
+          style={{ textDecoration: "none", color: "orange" }}
+        >
+          kunal bhande
+        </Link>
       </div>
 
       <div
