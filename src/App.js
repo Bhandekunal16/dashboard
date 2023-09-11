@@ -12,6 +12,9 @@ import Contact from "./components/contact";
 import YoutubeList from "./components/youtube_list";
 import ProjectList from "./components/project_list";
 import Dashboard from "./components/dashboard";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -28,8 +31,12 @@ function App() {
             <RouteV6 path="/projectList" element={<ProjectList />} />
           </Routes>
         </Layout>
+        <div>
+        <ToastContainer />
+        </div>
       </div>
     </Router>
+    
   );
 }
 

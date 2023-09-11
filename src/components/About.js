@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../env/environment";
+import { toast } from 'react-toastify';
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -20,6 +21,13 @@ const About = () => {
       return "Good night";
     }
   }
+
+  
+  const notify = () => {
+    toast.success('See About me', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   const fetchDataFromAPI = async () => {
     try {
@@ -46,6 +54,7 @@ const About = () => {
   useEffect(() => {
     fetchDataFromAPI();
     fetchProject();
+    notify();
   }, []);
 
   return (

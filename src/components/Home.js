@@ -1,8 +1,22 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import { environment, game, programiz } from "../env/environment";
+import { toast } from 'react-toastify';
+import React, { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    notify();
+  }, []);
+  
+  const notify = () => {
+    toast.success('Welcome to home page', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+ 
+
   return (
     <div className="primary">
       <div className="ui">
