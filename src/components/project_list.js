@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProjectList.css";
 import axios from "axios";
 import { environment } from "../env/environment";
-
+import { toast } from 'react-toastify';
 
 const ProjectList = () => {
   const [data, setData] = useState([]);
@@ -34,8 +34,15 @@ const ProjectList = () => {
     }
   };
 
+  const notify = () => {
+    toast.info("it is my project list", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   useEffect(() => {
     fetchDataFromAPI();
+    notify();
   }, []);
 
   return (

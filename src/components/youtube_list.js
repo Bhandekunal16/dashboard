@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./youtubeList.css";
 import axios from "axios";
 import { environment } from "../env/environment";
+import { toast } from 'react-toastify';
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
@@ -33,8 +34,16 @@ const YoutubeList = () => {
     }
   };
 
+  const notify = () => {
+    toast.info("it is my youtube vedio list it maybe help you !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+
   useEffect(() => {
     fetchDataFromAPI();
+    notify();
   }, []);
 
   return (
