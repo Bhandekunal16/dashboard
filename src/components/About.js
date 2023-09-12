@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../env/environment";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -12,8 +12,7 @@ const About = () => {
     fetchDataFromAPI();
     fetchProject();
     notify();
-  },[]);
-
+  }, []);
 
   function getTimeOfDay() {
     const timing = new Date().getHours();
@@ -29,9 +28,8 @@ const About = () => {
     }
   }
 
-  
   const notify = () => {
-    toast.success('See About me', {
+    toast.success("See About me", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
@@ -58,7 +56,6 @@ const About = () => {
     }
   };
 
-
   return (
     <div
       style={{
@@ -77,11 +74,15 @@ const About = () => {
           borderRadius: "10px",
         }}
       >
-        <h2 style={{ color: "skyblue", marginBottom: "0.5rem" }}>About Us</h2>
+        <h2
+          style={{ color: "skyblue", marginBottom: "0.5rem", fontSize: "24px" }}
+        >
+          About Us
+        </h2>
         <p style={{ color: "orange", marginBottom: "0.5rem" }}>
-          {new Date().toISOString()}
+          {new Date().toLocaleDateString()}
         </p>
-        <h1 style={{ color: "orange", marginBottom: "1rem" }}>
+        <h1 style={{ color: "orange", marginBottom: "1rem", fontSize: "32px" }}>
           {getTimeOfDay()}
         </h1>
         <h3>
@@ -89,7 +90,7 @@ const About = () => {
             to={`${method.http}://${environment.Youtube}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
-            our YouTube channel
+            Our YouTube channel
           </Link>
         </h3>
 
@@ -98,7 +99,7 @@ const About = () => {
             to={`${method.http}://${environment.inst}`}
             style={{ textDecoration: "none", color: "orange" }}
           >
-            our instagram handel
+            Our Instagram handle
           </Link>
         </h3>
 
@@ -135,15 +136,16 @@ const About = () => {
             textAlign: "center",
             color: "skyblue",
             marginBottom: "0.5rem",
+            fontSize: "24px",
           }}
         >
-          Connect us on LinkedIn
+          Connect with Us on LinkedIn
         </h1>
         <Link
           to="https://www.linkedin.com/in/kunal-bhande-2a0582271"
           style={{ textDecoration: "none", color: "orange" }}
         >
-          kunal bhande
+          Kunal Bhande
         </Link>
       </div>
 
@@ -162,6 +164,7 @@ const About = () => {
             textAlign: "center",
             color: "skyblue",
             marginBottom: "0.5rem",
+            fontSize: "24px",
           }}
         >
           Team
