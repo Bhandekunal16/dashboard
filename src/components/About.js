@@ -102,21 +102,59 @@ const About = () => {
             Our Instagram handle
           </Link>
         </h3>
+      </div>
 
-        <div style={{ marginBottom: "1rem" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+          marginTop: "2rem",
+        }}
+      >
+        <div
+          style={{
+            height:"10vh",
+            width:"30vw",
+            textAlign:"center",
+            padding:"2%",
+            backgroundColor: "#333",
+            boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+            borderRadius:"10px"
+          }}
+        >
           <Link
             to="/youtubeList"
             style={{ textDecoration: "none", color: "orange" }}
           >
-            YouTube Videos: {JSON.stringify(data.data)}
+            YouTube Videos:{" "}
+            <span style={{ color: "skyblue" }}>
+              {" "}
+              {JSON.stringify(data.data)}{" "}
+            </span>
           </Link>
         </div>
-        <div>
+        <div
+         style={{
+          height:"10vh",
+          width:"30vw",
+          textAlign:"center",
+          padding:"2%",
+          backgroundColor: "#333",
+          boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+          borderRadius:"10px"
+        }}>
           <Link
             to="/projectList"
             style={{ textDecoration: "none", color: "orange" }}
           >
-            Projects Count: {JSON.stringify(project.data)}
+            Projects Count:{" "}
+            <span style={{ color: "skyblue" }}>
+              {" "}
+              {JSON.stringify(project.data)}{" "}
+            </span>
           </Link>
         </div>
       </div>
