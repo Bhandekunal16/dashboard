@@ -8,6 +8,13 @@ const About = () => {
   const [data, setData] = useState([]);
   const [project, setProject] = useState([]);
 
+  useEffect(() => {
+    fetchDataFromAPI();
+    fetchProject();
+    notify();
+  },[]);
+
+
   function getTimeOfDay() {
     const timing = new Date().getHours();
 
@@ -51,11 +58,6 @@ const About = () => {
     }
   };
 
-  useEffect(() => {
-    fetchDataFromAPI();
-    fetchProject();
-    notify();
-  }, []);
 
   return (
     <div
