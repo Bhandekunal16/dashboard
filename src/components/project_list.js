@@ -54,9 +54,9 @@ const ProjectList = () => {
         <table className="project-table">
           <thead>
             <tr>
-              <th>Project Name</th>
-              <th>Date</th>
-              <th>Code In</th>
+              <th style={{backgroundColor:"#006400"}}>Project Name</th>
+              <th style={{backgroundColor:"#006400"}}>Date</th>
+              <th style={{backgroundColor:"#006400"}}>Code In</th>
             </tr>
           </thead>
           <tbody>
