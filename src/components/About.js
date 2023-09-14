@@ -3,6 +3,7 @@ import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../env/environment";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -11,9 +12,30 @@ const About = () => {
   useEffect(() => {
     fetchDataFromAPI();
     fetchProject();
+    button1();
     notify();
   }, []);
+  
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const button1 = async () => {
+    try {
+      const response = await axios.post(
+        `https://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `<a href="${method.http}://${environment.Youtube}" style= "text-decoration: none"> click </a>`,
+        }
+      );
+      console.log(response);
+      const button = document.getElementById("button1");
+      button.innerHTML = response.data;
+    } catch (error) {
+      setError("Error fetching data");
+    } finally {
+      setLoading(false);
+    }
+  };
   function getTimeOfDay() {
     const timing = new Date().getHours();
 
@@ -85,14 +107,11 @@ const About = () => {
         <h1 style={{ color: "orange", marginBottom: "1rem", fontSize: "32px" }}>
           {getTimeOfDay()}
         </h1>
-        <h3>
-          <Link
-            to={`${method.http}://${environment.Youtube}`}
-            style={{ textDecoration: "none", color: "orange" }}
-          >
-            Our YouTube channel
-          </Link>
-        </h3>
+
+        <p style={{ textDecoration: "none", color: "orange" }}>
+          Our YouTube channel
+        </p>
+        <div id="button1"></div>
 
         <h3>
           <Link
@@ -116,13 +135,13 @@ const About = () => {
       >
         <div
           style={{
-            height:"10vh",
-            width:"30vw",
-            textAlign:"center",
-            padding:"2%",
+            height: "10vh",
+            width: "30vw",
+            textAlign: "center",
+            padding: "2%",
             backgroundColor: "#333",
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
-            borderRadius:"10px"
+            borderRadius: "10px",
           }}
         >
           <Link
@@ -137,15 +156,16 @@ const About = () => {
           </Link>
         </div>
         <div
-         style={{
-          height:"10vh",
-          width:"30vw",
-          textAlign:"center",
-          padding:"2%",
-          backgroundColor: "#333",
-          boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
-          borderRadius:"10px"
-        }}>
+          style={{
+            height: "10vh",
+            width: "30vw",
+            textAlign: "center",
+            padding: "2%",
+            backgroundColor: "#333",
+            boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+            borderRadius: "10px",
+          }}
+        >
           <Link
             to="/projectList"
             style={{ textDecoration: "none", color: "orange" }}

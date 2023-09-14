@@ -55,8 +55,8 @@ const YoutubeList = () => {
         <table className="youtube-table">
           <thead>
             <tr>
-              <th>Video Name</th>
-              <th>Date Published</th>
+              <th style={{backgroundColor:"#006400"}}>Video Name</th>
+              <th style={{backgroundColor:"#006400"}}>Date Published</th>
             </tr>
           </thead>
           <tbody>
