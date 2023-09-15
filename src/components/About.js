@@ -14,6 +14,8 @@ const About = () => {
     fetchProject();
     button1();
     button2();
+    button3();
+    button4();
     notify();
   }, []);
 
@@ -47,6 +49,42 @@ const About = () => {
       );
       console.log(response);
       const button = document.getElementById("button2");
+      button.innerHTML = response.data;
+    } catch (error) {
+      setError("Error fetching data");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const button3 = async () => {
+    try {
+      const response = await axios.post(
+        `https://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `<a href="/youtubeList" style= "text-decoration: none"> click </a>`,
+        }
+      );
+      console.log(response);
+      const button = document.getElementById("button3");
+      button.innerHTML = response.data;
+    } catch (error) {
+      setError("Error fetching data");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const button4 = async () => {
+    try {
+      const response = await axios.post(
+        `https://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `<a href="/projectList" style= "text-decoration: none"> click </a>`,
+        }
+      );
+      console.log(response);
+      const button = document.getElementById("button4");
       button.innerHTML = response.data;
     } catch (error) {
       setError("Error fetching data");
@@ -128,50 +166,50 @@ const About = () => {
       </div>
 
       <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+          marginTop: "2rem",
+        }}
+      >
+        <div
           style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "90vw",
+            height: "auto",
+            width: "30vw",
+            textAlign: "center",
             padding: "2%",
+            backgroundColor: "#333",
+            boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
-            marginTop: "2rem",
+            textAlign: "center",
           }}
         >
-          <div
-            style={{
-              height: "auto",
-              width: "30vw",
-              textAlign: "center",
-              padding: "2%",
-              backgroundColor: "#333",
-              boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
-              borderRadius: "10px",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ textDecoration: "none", color: "orange" }}>
-              Our YouTube channel
-            </p>
-            <div id="button1"></div>
-          </div>
-          <div
-            style={{
-              height: "auto",
-              width: "30vw",
-              textAlign: "center",
-              padding: "2%",
-              backgroundColor: "#333",
-              boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
-              borderRadius: "10px",
-              textAlign: "center",
-            }}
-          >
-            <p style={{ textDecoration: "none", color: "orange" }}>
-              Our Instagram handle
-            </p>
-            <div id="button2"></div>
-          </div>
+          <p style={{ textDecoration: "none", color: "orange" }}>
+            Our YouTube channel
+          </p>
+          <div id="button1"></div>
         </div>
+        <div
+          style={{
+            height: "auto",
+            width: "30vw",
+            textAlign: "center",
+            padding: "2%",
+            backgroundColor: "#333",
+            boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+            borderRadius: "10px",
+            textAlign: "center",
+          }}
+        >
+          <p style={{ textDecoration: "none", color: "orange" }}>
+            Our Instagram handle
+          </p>
+          <div id="button2"></div>
+        </div>
+      </div>
 
       <div
         style={{
@@ -185,7 +223,7 @@ const About = () => {
       >
         <div
           style={{
-            height: "10vh",
+            height: "auto",
             width: "30vw",
             textAlign: "center",
             padding: "2%",
@@ -194,20 +232,17 @@ const About = () => {
             borderRadius: "10px",
           }}
         >
-          <Link
-            to="/youtubeList"
-            style={{ textDecoration: "none", color: "orange" }}
-          >
-            YouTube Videos:{" "}
+          <p style={{ textDecoration: "none", color: "orange" }}>
+            YouTube Videos:
             <span style={{ color: "skyblue" }}>
-              {" "}
               {JSON.stringify(data.data)}{" "}
             </span>
-          </Link>
+          </p>
+          <div id="button3"></div>
         </div>
         <div
           style={{
-            height: "10vh",
+            height: "auto",
             width: "30vw",
             textAlign: "center",
             padding: "2%",
@@ -216,16 +251,13 @@ const About = () => {
             borderRadius: "10px",
           }}
         >
-          <Link
-            to="/projectList"
-            style={{ textDecoration: "none", color: "orange" }}
-          >
+          <p style={{ textDecoration: "none", color: "orange" }}>
             Projects Count:{" "}
             <span style={{ color: "skyblue" }}>
-              {" "}
               {JSON.stringify(project.data)}{" "}
             </span>
-          </Link>
+          </p>
+          <div id="button4"></div>
         </div>
       </div>
 
