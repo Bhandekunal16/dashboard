@@ -24,7 +24,7 @@ export const project = {
   binary_converter: "bhandekunal16.github.io/binary-converter/",
   robotic_project: "bhandekunal16.github.io/Robotec-project/",
   time: "bhandekunal16.github.io/time/",
-  robotec_dashboard: "robotec-dashboard-1.vercel.app/",
+  robotec_dashboard: "robotec-dashboard-0-1.vercel.app/",
   cube_finder: "bhandekunal16.github.io/cube-finder/",
   squre_finder: "bhandekunal16.github.io/squre-root-finder/",
   glowing: "bhandekunal16.github.io/glowing-honey-comb-template/",
