@@ -216,7 +216,6 @@ const About = () => {
             backgroundColor: color().primary,
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
-            textAlign: "center",
           }}
         >
           <p style={{ textDecoration: "none", color: color().text }}>
