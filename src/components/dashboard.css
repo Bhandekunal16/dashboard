@@ -1,7 +1,7 @@
 /* YourComponentStyles.css */
 
 .gradient-background {
-  background-image: linear-gradient(to right top, #333333, #454954, #4c6278, #487e9a, #359cb6, #3aafc0, #48c2c7, #5cd4cc, #7fdecb, #9de8cd, #b9f2d1, #d3fbd8);
+  background-image: linear-gradient(to right top, #333333, #285d7c, #0093a5, #00c685, #a8eb12);
     height: 100vh;
     color: white;
     text-align: center;
