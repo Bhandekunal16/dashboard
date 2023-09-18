@@ -3,7 +3,7 @@ import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../env/environment";
 import { toast } from "react-toastify";
-import {color } from "../constant/color"
+import { color } from "../constant/color";
 import axios from "axios";
 
 const About = () => {
@@ -172,15 +172,27 @@ const About = () => {
           borderRadius: "10px",
         }}
       >
+        {error && <p>{error}</p>}
+        {loading && <p>{loading}</p>}
         <h2
-          style={{ color: color().sec, marginBottom: "0.5rem", fontSize: "24px" }}
+          style={{
+            color: color().sec,
+            marginBottom: "0.5rem",
+            fontSize: "24px",
+          }}
         >
           About Us
         </h2>
         <p style={{ color: color().text, marginBottom: "0.5rem" }}>
           {new Date().toLocaleDateString()}
         </p>
-        <h1 style={{ color: color().text, marginBottom: "1rem", fontSize: "32px" }}>
+        <h1
+          style={{
+            color: color().text,
+            marginBottom: "1rem",
+            fontSize: "32px",
+          }}
+        >
           {getTimeOfDay()}
         </h1>
       </div>
@@ -309,7 +321,6 @@ const About = () => {
         </Link>
       </div>
 
-
       <div
         style={{
           backgroundColor: color().primary,
@@ -330,9 +341,8 @@ const About = () => {
         >
           Introduction ..
         </h1>
-        <div style={{textAlign: "center"}} id="button5"></div>
+        <div style={{ textAlign: "center" }} id="button5"></div>
       </div>
-
 
       <div
         style={{

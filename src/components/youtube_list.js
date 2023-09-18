@@ -3,12 +3,13 @@ import "./youtubeList.css";
 import axios from "axios";
 import { environment } from "../env/environment";
 import { toast } from 'react-toastify';
+import {color } from '../constant/color'
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [setmessage, Setmessage] = useState(null);
+  const [setMessage, SetMessage] = useState(null);
 
   const fetchDataFromAPI = async () => {
     try {
@@ -22,7 +23,7 @@ const YoutubeList = () => {
       // Check if data is empty or equals 0
       if (apiData == null) {
         // Handle the case where data is empty
-        Setmessage("No data available");
+        SetMessage("No data available");
       } else {
         // Set the data when it's not empty
         setData(apiData);
@@ -50,13 +51,13 @@ const YoutubeList = () => {
     <div className="youtube-list-container">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {setmessage && <p>{setmessage}</p>}
+      {setMessage && <p>{setMessage}</p>}
       {data.length > 0 && (
         <table className="youtube-table">
           <thead>
             <tr>
-              <th style={{backgroundColor:"#006400"}}>Video Name</th>
-              <th style={{backgroundColor:"#006400"}}>Date Published</th>
+              <th style={{backgroundColor:color().header}}>Video Name</th>
+              <th style={{backgroundColor:color().header}}>Date Published</th>
             </tr>
           </thead>
           <tbody>
