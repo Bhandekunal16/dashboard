@@ -3,6 +3,7 @@ import { environment, game, programiz } from "../env/environment";
 import { toast } from "react-toastify";
 import React, { useEffect } from "react";
 import { color } from "../constant/color";
+import { PieChart } from "react-minimal-pie-chart";
 
 const Home = () => {
   useEffect(() => {
@@ -61,7 +62,6 @@ const Home = () => {
           </Link>
         </div>
       </div>
-
       <div style={{ textAlign: "center" }}>
         <p style={{ color: color().sec }}>
           if you want to practice it's some tool's for you.
@@ -90,6 +90,16 @@ const Home = () => {
             online python compiler from programiz.com
           </Link>
         </p>
+      </div>
+      <div style={{display: "flex", justifyContent: "center", padding: "3%"}}>
+        <PieChart
+          style={{ height: 180, background: color().primary, padding: "1%", width: "40vw" }}
+          data={[
+            { title: "One", value: 10, color: "#E38627" },
+            { title: "Two", value: 15, color: "#C13C37" },
+            { title: "Three", value: 20, color: "#6A2135" },
+          ]}
+        />
       </div>
     </div>
   );
