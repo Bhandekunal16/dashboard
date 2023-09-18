@@ -1,5 +1,3 @@
-
-
 export const environment = {
   base_url: "robotec-dashboard-mr7zjtcxz-bhandekunal16.vercel.app",
   inst: "www.instagram.com/roboticdevlopments01/?igshid=YTQwZjQ0NmI0OA%3D%3D",
@@ -8,7 +6,6 @@ export const environment = {
   python: "github.com/Bhandekunal16/Logic/tree/main/python",
   javascript: "github.com/Bhandekunal16/Logic/tree/main/javascript",
 };
-
 
 export const programiz = {
   c_compiler: "www.programiz.com/c-programming/online-compiler",
