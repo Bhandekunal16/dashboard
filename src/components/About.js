@@ -3,6 +3,7 @@ import { fetchData, fetchData2 } from "../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../env/environment";
 import { toast } from "react-toastify";
+import {color } from "../constant/color"
 import axios from "axios";
 
 const About = () => {
@@ -164,7 +165,7 @@ const About = () => {
     >
       <div
         style={{
-          backgroundColor: "#333",
+          backgroundColor: color().primary,
           boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           width: "90vw",
           padding: "2%",
@@ -172,14 +173,14 @@ const About = () => {
         }}
       >
         <h2
-          style={{ color: "skyblue", marginBottom: "0.5rem", fontSize: "24px" }}
+          style={{ color: color().sec, marginBottom: "0.5rem", fontSize: "24px" }}
         >
           About Us
         </h2>
-        <p style={{ color: "orange", marginBottom: "0.5rem" }}>
+        <p style={{ color: color().text, marginBottom: "0.5rem" }}>
           {new Date().toLocaleDateString()}
         </p>
-        <h1 style={{ color: "orange", marginBottom: "1rem", fontSize: "32px" }}>
+        <h1 style={{ color: color().text, marginBottom: "1rem", fontSize: "32px" }}>
           {getTimeOfDay()}
         </h1>
       </div>
@@ -200,13 +201,13 @@ const About = () => {
             width: "30vw",
             textAlign: "center",
             padding: "2%",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
             textAlign: "center",
           }}
         >
-          <p style={{ textDecoration: "none", color: "orange" }}>
+          <p style={{ textDecoration: "none", color: color().text }}>
             Our YouTube channel
           </p>
           <div id="button1"></div>
@@ -217,13 +218,13 @@ const About = () => {
             width: "30vw",
             textAlign: "center",
             padding: "2%",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
             textAlign: "center",
           }}
         >
-          <p style={{ textDecoration: "none", color: "orange" }}>
+          <p style={{ textDecoration: "none", color: color().text }}>
             Our Instagram handle
           </p>
           <div id="button2"></div>
@@ -246,14 +247,14 @@ const About = () => {
             width: "30vw",
             textAlign: "center",
             padding: "2%",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
           }}
         >
-          <p style={{ textDecoration: "none", color: "orange" }}>
+          <p style={{ textDecoration: "none", color: color().text }}>
             YouTube Videos:
-            <span style={{ color: "skyblue" }}>
+            <span style={{ color: color().sec }}>
               {JSON.stringify(data.data)}{" "}
             </span>
           </p>
@@ -265,14 +266,14 @@ const About = () => {
             width: "30vw",
             textAlign: "center",
             padding: "2%",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
             borderRadius: "10px",
           }}
         >
-          <p style={{ textDecoration: "none", color: "orange" }}>
+          <p style={{ textDecoration: "none", color: color().text }}>
             Projects Count:{" "}
-            <span style={{ color: "skyblue" }}>
+            <span style={{ color: color().sec }}>
               {JSON.stringify(project.data)}{" "}
             </span>
           </p>
@@ -282,7 +283,7 @@ const About = () => {
 
       <div
         style={{
-          backgroundColor: "#333",
+          backgroundColor: color().primary,
           boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
           width: "90vw",
           padding: "2%",
@@ -293,7 +294,7 @@ const About = () => {
         <h1
           style={{
             textAlign: "center",
-            color: "skyblue",
+            color: color().sec,
             marginBottom: "0.5rem",
             fontSize: "24px",
           }}
@@ -302,7 +303,7 @@ const About = () => {
         </h1>
         <Link
           to="https://www.linkedin.com/in/kunal-bhande-2a0582271"
-          style={{ textDecoration: "none", color: "orange" }}
+          style={{ textDecoration: "none", color: color().text }}
         >
           Kunal Bhande
         </Link>
@@ -311,7 +312,7 @@ const About = () => {
 
       <div
         style={{
-          backgroundColor: "#333",
+          backgroundColor: color().primary,
           boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
           width: "90vw",
           padding: "2%",
@@ -322,7 +323,7 @@ const About = () => {
         <h1
           style={{
             textAlign: "center",
-            color: "skyblue",
+            color: color().sec,
             marginBottom: "0.5rem",
             fontSize: "24px",
           }}
@@ -335,7 +336,7 @@ const About = () => {
 
       <div
         style={{
-          backgroundColor: "#333",
+          backgroundColor: color().primary,
           boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
           width: "90vw",
           padding: "2%",
@@ -346,17 +347,17 @@ const About = () => {
         <h1
           style={{
             textAlign: "center",
-            color: "skyblue",
+            color: color().sec,
             marginBottom: "0.5rem",
             fontSize: "24px",
           }}
         >
           Team
         </h1>
-        <p style={{ marginLeft: "10%", color: "orange" }}>
+        <p style={{ marginLeft: "10%", color: color().text }}>
           Name: Kunal Eknath Bhande
         </p>
-        <p style={{ marginLeft: "10%", color: "orange" }}>
+        <p style={{ marginLeft: "10%", color: color().text }}>
           Role: Backend/Frontend Lead & Project Management
         </p>
       </div>

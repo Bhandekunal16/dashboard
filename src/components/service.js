@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { project, method } from "../env/environment";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import { color } from "../constant/color";
 
 const Service = () => {
   useEffect(() => {
     notify();
   }, []);
-  
+
   const notify = () => {
-    toast.success('Dont forget to try our services.', {
+    toast.success("Dont forget to try our services.", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
@@ -19,14 +20,14 @@ const Service = () => {
         <div
           style={{
             textAlign: "center",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             borderRadius: "10px",
-            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)"
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <div className="service-item">
             <h2 style={{ color: "skyBlue" }}>Web Development</h2>
-            <p style={{ color: "orange" }}>
+            <p style={{ color: color().text }}>
               We offer professional web development services to build responsive
               and user-friendly websites.
             </p>
@@ -35,7 +36,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.html_creator}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     online html creator
                   </Link>
@@ -43,7 +44,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.html_routing}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     javascript base routing templates
                   </Link>
@@ -51,7 +52,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.web_application}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     web page template
                   </Link>
@@ -59,7 +60,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.binary_converter}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     binary-converter
                   </Link>
@@ -67,7 +68,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.robotic_project}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     mathematical calculator
                   </Link>
@@ -78,7 +79,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.time}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     time
                   </Link>
@@ -86,7 +87,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.robotec_dashboard}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     Live working web portal
                   </Link>
@@ -94,7 +95,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.cube_finder}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     cube founder
                   </Link>
@@ -102,7 +103,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.squre_finder}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     square founder
                   </Link>
@@ -110,7 +111,7 @@ const Service = () => {
                 <p>
                   <Link
                     to={`${method.http}://${project.glowing}`}
-                    style={{ textDecoration: "none", color: "orange" }}
+                    style={{ textDecoration: "none", color: color().text }}
                   >
                     glowing cube design
                   </Link>
@@ -118,27 +119,38 @@ const Service = () => {
               </div>
             </div>
           </div>
-          <div
-            className="service-item"
-            style={{ backgroundColor: "#333", borderRadius: "10px",  boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)" }}
-          >
-            <h2 style={{ color: "skyblue" }}>Mobile App Development</h2>
-            <p style={{ color: "orange" }}>
-              We specialize in developing mobile applications for both Android
-              and iOS platforms.
-            </p>
-          </div>
-          <div
-            className="service-item"
-            style={{ backgroundColor: "#333", borderRadius: "10px" , boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)"}}
-          >
-            <h2 style={{ color: "skyblue" }}>Digital Marketing</h2>
-            <p style={{ color: "orange" }}>
-              Our digital marketing services include SEO, social media
-              marketing, and content marketing.
-            </p>
-          </div>
         </div>
+      </div>
+      <div
+        className="service-item"
+        style={{
+          backgroundColor: color().primary,
+          borderRadius: "10px",
+          boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
+          textAlign: "center",
+        }}
+      >
+        <h2 style={{ color: "skyblue" }}>Mobile App Development</h2>
+        <p style={{ color: color().text }}>
+          We specialize in developing mobile applications for both Android and
+          iOS platforms.
+        </p>
+      </div>
+
+      <div
+        className="service-item"
+        style={{
+          backgroundColor: color().primary,
+          borderRadius: "10px",
+          boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
+          textAlign: "center",
+        }}
+      >
+        <h2 style={{ color: "skyblue" }}>Digital Marketing</h2>
+        <p style={{ color: color().text }}>
+          Our digital marketing services include SEO, social media marketing,
+          and content marketing.
+        </p>
       </div>
     </>
   );

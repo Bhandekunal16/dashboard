@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { environment, game, programiz } from "../env/environment";
 import { toast } from 'react-toastify';
 import React, { useEffect } from "react";
+import{ color } from '../constant/color'
 
 const Home = () => {
   useEffect(() => {
@@ -21,11 +22,11 @@ const Home = () => {
     <div className="primary">
       <div className="ui">
         <main className="ui-home">
-          <h2 style={{ color: "skyblue" }}>code-book</h2>
+          <h2 style={{ color: color().sec }}>code-book</h2>
           <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.c}`}
-              style={{ textDecoration: "none", color: "orange" }}
+              style={{ textDecoration: "none", color: color().text }}
             >
               Introduction to C Programming Basics
             </Link>
@@ -33,7 +34,7 @@ const Home = () => {
           <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.python}`}
-              style={{ textDecoration: "none", color: "orange" }}
+              style={{ textDecoration: "none", color: color().text }}
             >
               Introduction to python Programming Basics
             </Link>
@@ -41,7 +42,7 @@ const Home = () => {
           <div style={{ padding: "1%" }}>
             <Link
               to={`https://${environment.javascript}`}
-              style={{ textDecoration: "none", color: "orange" }}
+              style={{ textDecoration: "none", color: color().text }}
             >
               Introduction to javascript Programming Basics
             </Link>
@@ -50,10 +51,10 @@ const Home = () => {
       </div>
       <div className="ui">
         <div className="ui-home">
-          <h2 style={{ color: "skyblue" }}>game</h2>
+          <h2 style={{ color: color().sec }}>game</h2>
           <Link
             style={{
-              color: "orange",
+              color: color().text,
               padding: "1%",
               textDecoration: "none",
             }}
@@ -65,13 +66,13 @@ const Home = () => {
       </div>
 
       <div style={{ textAlign: "center" }}>
-        <p style={{ color: "skyblue" }}>
+        <p style={{ color: color().sec }}>
           if you want to practice it's some tool's for you.
         </p>
         <p>
           <Link
             style={{
-              color: "orange",
+              color: color().header,
               padding: "1%",
               textDecoration: "none",
             }}
@@ -83,7 +84,7 @@ const Home = () => {
         <p>
           <Link
             style={{
-              color: "orange",
+              color: color().header,
               padding: "1%",
               textDecoration: "none",
             }}
