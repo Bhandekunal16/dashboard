@@ -6,9 +6,12 @@ const Contact = () => {
   const [error, setError] = useState(null);
   const fetchDataFromAPI = async () => {
     try {
-      const response = await axios.post(`${method.http}://${environment.base_url}/get/ButtonUI`, {
-        data: `Send Email`,
-      });
+      const response = await axios.post(
+        `${method.http}://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `Send Email`,
+        }
+      );
       console.log(response);
       const button = document.getElementById("submit");
       button.innerHTML = response.data;

@@ -22,7 +22,7 @@ function App() {
         <div>
           <Layout>
             <Routes>
-              <RouteV6 path="/" element={<Dashboard />} exact/>
+              <RouteV6 path="/" element={<Dashboard />} exact />
               <RouteV6 path="/home" element={<Home />} />
               <RouteV6 path="/about" element={<About />} />
               <RouteV6 path="/service" element={<Service />} />

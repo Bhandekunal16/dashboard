@@ -3,15 +3,17 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { environment } from "../env/environment";
 
-
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const fetchDataFromAPI = async () => {
     try {
-      const response = await axios.post(`https://${environment.base_url}/get/ButtonUI`, {
-        data: `<a href="/home" style= "text-decoration: none"> click to start</a>`,
-      });
+      const response = await axios.post(
+        `https://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `<a href="/home" style= "text-decoration: none"> click to start</a>`,
+        }
+      );
       console.log(response);
       const button = document.getElementById("button-ui");
       button.innerHTML = response.data;
@@ -22,7 +24,6 @@ const Dashboard = () => {
     }
   };
 
-  
   useEffect(() => {
     fetchDataFromAPI();
   }, []);

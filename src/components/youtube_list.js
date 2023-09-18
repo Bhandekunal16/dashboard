@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./youtubeList.css";
 import axios from "axios";
 import { environment } from "../env/environment";
-import { toast } from 'react-toastify';
-import {color } from '../constant/color'
+import { toast } from "react-toastify";
+import { color } from "../constant/color";
 
 const YoutubeList = () => {
   const [data, setData] = useState([]);
@@ -41,7 +41,6 @@ const YoutubeList = () => {
     });
   };
 
-
   useEffect(() => {
     fetchDataFromAPI();
     notify();
@@ -56,8 +55,10 @@ const YoutubeList = () => {
         <table className="youtube-table">
           <thead>
             <tr>
-              <th style={{backgroundColor:color().header}}>Video Name</th>
-              <th style={{backgroundColor:color().header}}>Date Published</th>
+              <th style={{ backgroundColor: color().header }}>Video Name</th>
+              <th style={{ backgroundColor: color().header }}>
+                Date Published
+              </th>
             </tr>
           </thead>
           <tbody>

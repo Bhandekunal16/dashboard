@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./ProjectList.css";
 import axios from "axios";
 import { environment } from "../env/environment";
-import { toast } from 'react-toastify';
-import {color} from '../constant/color'
+import { toast } from "react-toastify";
+import { color } from "../constant/color";
 
 const ProjectList = () => {
   const [data, setData] = useState([]);
@@ -55,9 +55,9 @@ const ProjectList = () => {
         <table className="project-table">
           <thead>
             <tr>
-              <th style={{backgroundColor:color().header}}>Project Name</th>
-              <th style={{backgroundColor:color().header}}>Date</th>
-              <th style={{backgroundColor:color().header}}>Code In</th>
+              <th style={{ backgroundColor: color().header }}>Project Name</th>
+              <th style={{ backgroundColor: color().header }}>Date</th>
+              <th style={{ backgroundColor: color().header }}>Code In</th>
             </tr>
           </thead>
           <tbody>

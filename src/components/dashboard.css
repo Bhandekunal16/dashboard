@@ -1,49 +1,55 @@
 /* YourComponentStyles.css */
 
 .gradient-background {
-  background-image: linear-gradient(to right top, #333333, #285d7c, #0093a5, #00c685, #a8eb12);
-    height: 100vh;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button {
-    background-color: skyblue;
-    color: black;
-    border-radius: 8px;
-    padding: 1%;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  .gradient-background svg {
-    pointer-events: none;
-    height: 40vh;
-    width: 40vw;
-  }
+  background-image: linear-gradient(
+    to right top,
+    #333333,
+    #285d7c,
+    #0093a5,
+    #00c685,
+    #a8eb12
+  );
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  #button-ui{
-    text-decoration: none;
+.button {
+  background-color: skyblue;
+  color: black;
+  border-radius: 8px;
+  padding: 1%;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.gradient-background svg {
+  pointer-events: none;
+  height: 40vh;
+  width: 40vw;
+}
+
+#button-ui {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gradient-background svg {
+    animation: App-logo-spin infinite 20s linear;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .gradient-background svg {
-      animation: App-logo-spin infinite 20s linear;
-    }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
+}
