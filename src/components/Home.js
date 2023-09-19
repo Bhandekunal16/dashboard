@@ -1,14 +1,55 @@
 import { Link } from "react-router-dom";
-import { environment, game, programiz } from "../env/environment";
+import { environment, game, programiz, method } from "../env/environment";
 import { toast } from "react-toastify";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { color } from "../constant/color";
 import { PieChart } from "react-minimal-pie-chart";
+import { fetchData, fetchData2, fetchData3 } from "../service/app-service";
 
 const Home = () => {
   useEffect(() => {
     notify();
+    fetchDataFromAPI();
+    fetchProject();
+    fetchInsta();
   }, []);
+
+  const [data, setData] = useState([]);
+  const [project, setProject] = useState([]);
+  const [insta, setInsta] = useState([]);
+
+  const fetchDataFromAPI = async () => {
+    try {
+      const apiData = await fetchData(
+        `${method.http}://${environment.base_url}/youtube/getCount1`
+      );
+      setData(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchProject = async () => {
+    try {
+      const apiData = await fetchData2(
+        `${method.http}://${environment.base_url}/project/getCount`
+      );
+      setProject(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchInsta = async () => {
+    try {
+      const apiData = await fetchData3(
+        `${method.http}://${environment.base_url}/project/getCount`
+      );
+      setInsta(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const notify = () => {
     toast.success("Welcome to home page", {
@@ -91,15 +132,33 @@ const Home = () => {
           </Link>
         </p>
       </div>
-      <div style={{display: "flex", justifyContent: "center", padding: "3%"}}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          paddingTop: "2%",
+        }}
+      >
         <PieChart
-          style={{ height: 180, background: color().primary, padding: "1%", width: "40vw" }}
+          style={{
+            height: 180,
+            background: color().primary,
+            padding: "1%",
+            width: "40vw",
+            borderRadius: "20px",
+          }}
           data={[
-            { title: "One", value: 10, color: "#E38627" },
-            { title: "Two", value: 15, color: "#C13C37" },
-            { title: "Three", value: 20, color: "#6A2135" },
+            { title: "Youtube", value: data, color: "#E38627" },
+            { title: "Two", value: project, color: "#C13C37" },
+            { title: "Three", value: insta, color: "#6A2135" },
           ]}
         />
+
+        <div style={{ color: color().header }}>
+          <p>Youtube : red </p>
+          <p> insta : brown </p>
+          <p> project : orange</p>
+        </div>
       </div>
     </div>
   );
