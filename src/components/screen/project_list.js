@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProjectList.css";
 import axios from "axios";
 import { environment } from "../../env/environment";
-import { toast } from "react-toastify";
+import { notify } from "../../common/popup";
 import { color } from "../../constant/color";
 
 const ProjectList = () => {
@@ -35,15 +35,9 @@ const ProjectList = () => {
     }
   };
 
-  const notify = () => {
-    toast.info("it is my project list", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  };
-
   useEffect(() => {
     fetchDataFromAPI();
-    notify();
+    notify("it is my project list");
   }, []);
 
   return (
