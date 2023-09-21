@@ -23,3 +23,9 @@ export const error = (data) => {
     position: toast.POSITION.TOP_RIGHT,
   });
 };
+
+export const dismiss = (data) => {
+  toast.dismiss(`${data}`, {
+    position: toast.POSITION.TOP_RIGHT,
+  });
+};
