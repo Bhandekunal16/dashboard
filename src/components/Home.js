@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { color } from "../constant/color";
 import { PieChart } from "react-minimal-pie-chart";
 import { fetchData, fetchData2, fetchData3 } from "../service/app-service";
+import ChartUI from "./chart";
 
 const Home = () => {
   useEffect(() => {
@@ -159,6 +160,16 @@ const Home = () => {
           <p> insta : brown </p>
           <p> project : orange</p>
         </div>
+      </div>
+
+      <div
+        style={{
+          width: "100vw",
+          height: "auto",
+          padding : "1%",
+        }}
+      >
+        <ChartUI />
       </div>
     </div>
   );
