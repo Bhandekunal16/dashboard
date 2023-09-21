@@ -166,7 +166,7 @@ const Home = () => {
         style={{
           width: "100vw",
           height: "auto",
-          padding : "5%",
+          paddingTop : "5%",
         }}
       >
         <ChartUI data={data} project={project} insta={insta} />
