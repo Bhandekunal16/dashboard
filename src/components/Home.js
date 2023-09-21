@@ -169,7 +169,7 @@ const Home = () => {
           padding : "1%",
         }}
       >
-        <ChartUI />
+        <ChartUI data={data} project={project} insta={insta} />
       </div>
     </div>
   );
