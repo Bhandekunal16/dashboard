@@ -10,6 +10,41 @@ export default function ChartUI() {
   const [project, setProject] = useState([]);
   const [insta, setInsta] = useState([]);
 
+  const fetchDataFromAPI = async () => {
+    try {
+        console.log('hii');
+      const apiData = await fetchData(
+        `${method.http}://${environment.base_url}/youtube/getCount1`
+      );
+      setData(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchProject = async () => {
+    try {
+      const apiData = await fetchData2(
+        `${method.http}://${environment.base_url}/project/getCount`
+      );
+      setProject(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchInsta = async () => {
+    try {
+      const apiData = await fetchData3(
+        `${method.http}://${environment.base_url}/project/getCount`
+      );
+      setInsta(apiData.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   useEffect(() => {
     fetchDataFromAPI();
     fetchProject();
@@ -50,40 +85,7 @@ export default function ChartUI() {
 
  
 
-  const fetchDataFromAPI = async () => {
-    try {
-        console.log('hii');
-      const apiData = await fetchData(
-        `${method.http}://${environment.base_url}/youtube/getCount1`
-      );
-      setData(apiData.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchProject = async () => {
-    try {
-      const apiData = await fetchData2(
-        `${method.http}://${environment.base_url}/project/getCount`
-      );
-      setProject(apiData.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchInsta = async () => {
-    try {
-      const apiData = await fetchData3(
-        `${method.http}://${environment.base_url}/project/getCount`
-      );
-      setInsta(apiData.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
+ 
 
   return (
     <div className="card">
