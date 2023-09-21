@@ -1,19 +1,15 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { project, method } from "../../env/environment";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import { notify } from "../../common/popup";
 import { color } from "../../constant/color";
 
 const Service = () => {
   useEffect(() => {
-    notify();
+    notify("Dont forget to try our services.");
   }, []);
 
-  const notify = () => {
-    toast.success("Dont forget to try our services.", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  };
   return (
     <>
       <div className="primary" style={{ padding: "1%" }}>

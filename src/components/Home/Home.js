@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { environment, game, programiz, method } from "../../env/environment";
-import { toast } from "react-toastify";
+import { notify } from "../../common/popup";
 import React, { useEffect, useState } from "react";
 import { color } from "../../constant/color";
 import { PieChart } from "react-minimal-pie-chart";
@@ -9,7 +9,7 @@ import ChartUI from "../screen/chart";
 
 const Home = () => {
   useEffect(() => {
-    notify();
+    notify("Welcome to home page");
     fetchDataFromAPI();
     fetchProject();
     fetchInsta();
@@ -50,12 +50,6 @@ const Home = () => {
     } catch (error) {
       console.error(error);
     }
-  };
-
-  const notify = () => {
-    toast.success("Welcome to home page", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
   };
 
   return (

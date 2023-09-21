@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { fetchData, fetchData2 } from "../../service/app-service";
 import { Link } from "react-router-dom";
 import { environment, method } from "../../env/environment";
-import { toast } from "react-toastify";
+
 import { color } from "../../constant/color";
 import axios from "axios";
+import { notify } from '../../common/popup'
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -18,7 +19,7 @@ const About = () => {
     button3();
     button4();
     button5();
-    notify();
+    notify('this is about me');
   }, []);
 
   const [loading, setLoading] = useState(true);
@@ -126,11 +127,6 @@ const About = () => {
     }
   }
 
-  const notify = () => {
-    toast.success("See About me", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
-  };
 
   const fetchDataFromAPI = async () => {
     try {
