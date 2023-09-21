@@ -42,7 +42,7 @@ export default function ChartUI(props) {
 
     setChartData(data);
     setChartOptions(options);
-  }, []);
+  }, [props.data, props.project, props.insta]);
 
  
 
