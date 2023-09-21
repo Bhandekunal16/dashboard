@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
-import { environment, method } from "../env/environment";
-// import { fetchData, fetchData2, fetchData3 } from "../service/app-service";
-import axios from 'axios'; // Import Axios
+
 
 export default function ChartUI(props) {
   const [chartData, setChartData] = useState({});
