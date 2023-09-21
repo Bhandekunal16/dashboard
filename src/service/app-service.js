@@ -79,20 +79,3 @@ export const fetchProjectData = async () => {
     throw error;
   }
 };
-
-// export const userId = (id) => {
-//   return new Promise((resolve, reject) => {
-//     this.http
-//       .post(environment.apiUrl + "societies/getMcInfoBySocietyId", {
-//         societyId: id,
-//       })
-//       .subscribe(
-//         (res) => {
-//           resolve(res);
-//         },
-//         (error) => {
-//           reject(error);
-//         }
-//       );
-//   });
-// }
