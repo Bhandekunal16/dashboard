@@ -1,7 +1,7 @@
 import "./dashboard.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { environment } from "../env/environment";
+import { environment } from "../../env/environment";
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);

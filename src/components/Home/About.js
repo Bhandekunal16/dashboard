@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { fetchData, fetchData2 } from "../service/app-service";
+import { fetchData, fetchData2 } from "../../service/app-service";
 import { Link } from "react-router-dom";
-import { environment, method } from "../env/environment";
+import { environment, method } from "../../env/environment";
 import { toast } from "react-toastify";
-import { color } from "../constant/color";
+import { color } from "../../constant/color";
 import axios from "axios";
 
 const About = () => {

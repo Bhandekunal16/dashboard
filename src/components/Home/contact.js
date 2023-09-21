@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { environment, method } from "../env/environment";
+import { environment, method } from "../../env/environment";
 const Contact = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
