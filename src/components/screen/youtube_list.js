@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
-import "./ProjectList.css";
+import "./youtubeList.css";
 import axios from "axios";
-import { environment } from "../env/environment";
+import { environment } from "../../env/environment";
 import { toast } from "react-toastify";
-import { color } from "../constant/color";
+import { color } from "../../constant/color";
 
-const ProjectList = () => {
+const YoutubeList = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [setmessage, Setmessage] = useState(null);
+  const [setMessage, SetMessage] = useState(null);
 
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        `https://${environment.base_url}/project/getallproject`
+        `https://${environment.base_url}/youtube/getAllYoutube`
       );
 
       console.log(response);
       const apiData = response.data.data;
 
       // Check if data is empty or equals 0
-      if (apiData === null) {
+      if (apiData == null) {
         // Handle the case where data is empty
-        Setmessage("No data available");
+        SetMessage("No data available");
       } else {
         // Set the data when it's not empty
         setData(apiData);
@@ -36,7 +36,7 @@ const ProjectList = () => {
   };
 
   const notify = () => {
-    toast.info("it is my project list", {
+    toast.info("it is my youtube vedio list it maybe help you !", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
@@ -47,25 +47,25 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <div className="project-list-container">
+    <div className="youtube-list-container">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {setmessage && <p>{setmessage}</p>}
+      {setMessage && <p>{setMessage}</p>}
       {data.length > 0 && (
-        <table className="project-table">
+        <table className="youtube-table">
           <thead>
             <tr>
-              <th style={{ backgroundColor: color().header }}>Project Name</th>
-              <th style={{ backgroundColor: color().header }}>Date</th>
-              <th style={{ backgroundColor: color().header }}>Code In</th>
+              <th style={{ backgroundColor: color().header }}>Video Name</th>
+              <th style={{ backgroundColor: color().header }}>
+                Date Published
+              </th>
             </tr>
           </thead>
           <tbody>
             {data.map((item) => (
-              <tr key={item.projectName}>
-                <td>{item.projectName}</td>
+              <tr key={item.Date}>
+                <td>{item.name}</td>
                 <td>{item.Date}</td>
-                <td>{item.codeIn}</td>
               </tr>
             ))}
           </tbody>
@@ -75,4 +75,4 @@ const ProjectList = () => {
   );
 };
 
-export default ProjectList;
+export default YoutubeList;

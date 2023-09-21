@@ -9,8 +9,8 @@ import {
 import Service from "./components/service";
 import About from "./components/About";
 import Contact from "./components/contact";
-import YoutubeList from "./components/youtube_list";
-import ProjectList from "./components/project_list";
+import YoutubeList from "./components/screen/youtube_list";
+import ProjectList from "./components/screen/project_list";
 import Dashboard from "./components/dashboard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
