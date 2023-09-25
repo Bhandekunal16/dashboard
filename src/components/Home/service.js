@@ -69,11 +69,11 @@ const Service = () => {
               to={`${method.http}://${project.html_creator}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : online html creator
+              Project Name : online html creator
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : html web page that where you write the html code and
+            Description : html web page that where you write the html code and
             get result in same place
           </p>
         </div>
@@ -96,11 +96,11 @@ const Service = () => {
               to={`${method.http}://${project.html_routing}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : javascript base routing templates
+              Project Name : javascript base routing templates
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : html web template.
+            Description : html web template.
           </p>
         </div>
       </div>
@@ -131,11 +131,11 @@ const Service = () => {
               to={`${method.http}://${project.web_application}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : web page template
+              Project Name : web page template
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : html web page template
+            Description : html web page template
           </p>
         </div>
         <div
@@ -157,11 +157,11 @@ const Service = () => {
               to={`${method.http}://${project.binary_converter}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : binary-converter
+              Project Name : binary-converter
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : take the input and convert it on binary form .
+            Description : take the input and convert it on binary form .
           </p>
         </div>
       </div>
@@ -192,11 +192,11 @@ const Service = () => {
               to={`${method.http}://${project.robotic_project}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : mathematical calculator
+              Project Name : mathematical calculator
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : calculator portal.
+            Description : calculator portal.
           </p>
         </div>
         <div
@@ -218,11 +218,11 @@ const Service = () => {
               to={`${method.http}://${project.time}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : time
+              Project Name : time
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : time showing portal.
+            Description : time showing portal.
           </p>
         </div>
       </div>
@@ -253,11 +253,11 @@ const Service = () => {
               to={`${method.http}://${project.robotec_dashboard}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : angular web application template
+              Project Name : angular web application template
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : Live working web portal.
+            Description : Live working web portal.
           </p>
         </div>
         <div
@@ -279,11 +279,11 @@ const Service = () => {
               to={`${method.http}://${project.cube_finder}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : cube founder
+              Project Name : cube founder
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : find a cube of any given number.
+            Description : find a cube of any given number.
           </p>
         </div>
       </div>
@@ -314,11 +314,11 @@ const Service = () => {
               to={`${method.http}://${project.squre_finder}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : square founder
+              Project Name : square founder
             </Link>
           </h3>
           <p style={{ color: color().text }}>
-            description : give the square of any given number.
+            Description : give the square of any given number.
           </p>
         </div>
         <div
@@ -340,10 +340,10 @@ const Service = () => {
               to={`${method.http}://${project.glowing}`}
               style={{ textDecoration: "none", color: color().text }}
             >
-              project name : glowing cube design
+              Project Name : glowing cube design
             </Link>
           </h3>
-          <p style={{ color: color().text }}>description : glowing template.</p>
+          <p style={{ color: color().text }}>Description : glowing template.</p>
         </div>
       </div>
     </>
