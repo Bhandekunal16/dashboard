@@ -62,7 +62,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -89,7 +89,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -124,7 +124,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -150,7 +150,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -185,7 +185,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -211,7 +211,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -246,7 +246,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -272,7 +272,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -307,7 +307,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
@@ -333,7 +333,7 @@ const Service = () => {
         >
           <h3
             style={{
-              backgroundColor: color().sec,
+              backgroundColor: color().header,
             }}
           >
             <Link
