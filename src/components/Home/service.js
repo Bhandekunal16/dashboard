@@ -84,6 +84,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -118,6 +119,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -143,6 +145,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -177,6 +180,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -202,6 +206,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -236,6 +241,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -261,6 +267,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -295,6 +302,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
@@ -320,6 +328,7 @@ const Service = () => {
             width: "40vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
           }}
         >
           <h3
