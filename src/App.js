@@ -14,6 +14,7 @@ import ProjectList from "./components/screen/project_list";
 import Dashboard from "./components/start/dashboard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Assistant from "./components/Home/assistant";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <RouteV6 path="/contact" element={<Contact />} />
               <RouteV6 path="/youtubeList" element={<YoutubeList />} />
               <RouteV6 path="/projectList" element={<ProjectList />} />
+              <RouteV6 path="/assistant" element={<Assistant />} />
             </Routes>
           </Layout>
         </div>
