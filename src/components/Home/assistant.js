@@ -50,7 +50,7 @@ const Assistant = () => {
               backgroundColor: "#333",
               color: "white",
               height: "55vh",
-              width:  "60vw",
+              width:   "100vw",
               textAlign: "center",
             }}
           ></div>
@@ -64,7 +64,7 @@ const Assistant = () => {
               backgroundColor: "#333",
               color: "white",
               height: "auto",
-              width:  "60vw",
+              width:   "100vw",
               alignItems:"center"
             }}
           ></textarea>
@@ -77,7 +77,7 @@ const Assistant = () => {
             backgroundColor: "#333",
             color: "white",
             height: "auto",
-            width:  "60vw",
+            width:   "100vw",
           }}
         ></textarea>
       </div>
