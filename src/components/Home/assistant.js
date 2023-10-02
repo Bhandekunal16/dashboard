@@ -10,9 +10,29 @@ const Assistant = () => {
     const mathematical = document.getElementById("math");
 
     if (input.value === "table") {
+      mathematical.style.display = "block";
       const tableResult = math(input.value, mathematical.value);
-      console.log(tableResult)
-      ans.innerHTML = tableResult;
+      console.log(tableResult);
+      ans.innerHTML =
+        tableResult.one +
+        "," +
+        tableResult.two +
+        "," +
+        tableResult.three +
+        "," +
+        tableResult.four +
+        "," +
+        tableResult.five +
+        "," +
+        tableResult.six +
+        "," +
+        tableResult.seven +
+        "," +
+        tableResult.eight +
+        "," +
+        tableResult.nine +
+        "," +
+        tableResult.ten;
     } else {
       const methodResult = output(input.value);
       ans.innerHTML = methodResult;
@@ -29,12 +49,27 @@ const Assistant = () => {
             style={{
               backgroundColor: "#333",
               color: "white",
-              height: "50vh",
-              width: "50vw",
+              height: "55vh",
+              width:  "60vw",
               textAlign: "center",
             }}
           ></div>
         </div>
+        <div style={{display:"flex", justifyContent:"center"}}>
+        <textarea
+            id="math"
+            onInput={terminal}
+            style={{
+              display: "none",
+              backgroundColor: "#333",
+              color: "white",
+              height: "auto",
+              width:  "60vw",
+              alignItems:"center"
+            }}
+          ></textarea>
+        </div>
+       
         <textarea
           id="input"
           onInput={terminal}
@@ -42,7 +77,7 @@ const Assistant = () => {
             backgroundColor: "#333",
             color: "white",
             height: "auto",
-            width: "50vw",
+            width:  "60vw",
           }}
         ></textarea>
       </div>
