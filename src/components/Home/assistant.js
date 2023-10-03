@@ -7,6 +7,7 @@ import {
   convertToBinary,
   hexadecimalConvert,
   hexToString,
+  calculation,
 } from "../../math";
 
 const Assistant = () => {
@@ -42,9 +43,11 @@ const Assistant = () => {
     } else if (input.value == "log") {
       mathematical.style.display = "block";
       const log = output(input.value, mathematical.value);
-    } else if (input.value == "random") {
+    } else if (input.value == "random number") {
       mathematical.style.display = "block";
       const random = output(input.value, mathematical.value);
+     
+      console.log(test);
       ans.innerHTML = random;
     } else if (input.value == "convert binary") {
       mathematical.style.display = "block";
@@ -62,7 +65,13 @@ const Assistant = () => {
       mathematical.style.display = "block";
       const hex = hexToString(mathematical.value);
       ans.innerHTML = hex;
-    } else {
+    }
+    else if (input.value == 'calculate'){
+      mathematical.style.display = "block";
+      const calculate = calculation(mathematical.value);
+      ans.innerHTML = calculate
+    }
+    else {
       const methodResult = output(input.value);
       ans.innerHTML = methodResult;
     }

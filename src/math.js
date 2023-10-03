@@ -79,3 +79,13 @@ function hexStringToAscii(hexString) {
     .join("");
   return asciiString;
 }
+
+export const calculation = (input) => {
+  try {
+    const output = eval(input)
+    console.log(output);
+    return output;
+  } catch (error) {
+    return error;
+  }
+};
