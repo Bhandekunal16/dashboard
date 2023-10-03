@@ -95,17 +95,12 @@ export const octal = (input) => {
     if (typeof input === "number") {
       input = input.toString();
     }
-
     let octalNumber = "";
-
     for (let i = 0; i < input.length; i++) {
       const char = input[i];
-
       const octalChar = char.charCodeAt(0).toString(8);
-
       octalNumber += octalChar;
     }
-
     return octalNumber;
   } catch (error) {
     return error.message;
