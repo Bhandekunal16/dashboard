@@ -1,7 +1,13 @@
 import React from "react";
 import "../Home/assitant.css";
 import { output } from "../../ouput";
-import { math } from "../../math";
+import {
+  convertToString,
+  math,
+  convertToBinary,
+  hexadecimalConvert,
+  hexToString
+} from "../../math";
 
 const Assistant = () => {
   function terminal() {
@@ -33,12 +39,30 @@ const Assistant = () => {
         tableResult.nine +
         "," +
         tableResult.ten;
-    } 
-    else if(input.value ="log"){
+    } else if (input.value == "log") {
       mathematical.style.display = "block";
       const log = output(input.value, mathematical.value);
-    }
-    else {
+    } else if (input.value == "random") {
+      mathematical.style.display = "block";
+      const random = output(input.value, mathematical.value);
+      ans.innerHTML = random;
+    } else if (input.value == "convert binary") {
+      mathematical.style.display = "block";
+      const binary = convertToBinary(mathematical.value);
+      ans.innerHTML = binary;
+    } else if (input.value == "convert binary to string") {
+      mathematical.style.display = "block";
+      const binary = convertToString(mathematical.value);
+      ans.innerHTML = binary;
+    } else if (input.value == "convert to hex") {
+      mathematical.style.display = "block";
+      const hex = hexadecimalConvert(mathematical.value);
+      ans.innerHTML = hex;
+    } else if (input.value == "convert hex to string") {
+      mathematical.style.display = "block";
+      const hex = hexToString(mathematical.value);
+      ans.innerHTML = hex;
+    } else {
       const methodResult = output(input.value);
       ans.innerHTML = methodResult;
     }
@@ -55,13 +79,13 @@ const Assistant = () => {
               backgroundColor: "#333",
               color: "white",
               height: "55vh",
-              width:   "100vw",
+              width: "100vw",
               textAlign: "center",
             }}
           ></div>
         </div>
-        <div style={{display:"flex", justifyContent:"center"}}>
-        <textarea
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <textarea
             id="math"
             onInput={terminal}
             style={{
@@ -69,12 +93,12 @@ const Assistant = () => {
               backgroundColor: "#333",
               color: "white",
               height: "auto",
-              width:   "100vw",
-              alignItems:"center"
+              width: "100vw",
+              alignItems: "center",
             }}
           ></textarea>
         </div>
-       
+
         <textarea
           id="input"
           onInput={terminal}
@@ -82,7 +106,7 @@ const Assistant = () => {
             backgroundColor: "#333",
             color: "white",
             height: "auto",
-            width:   "100vw",
+            width: "100vw",
           }}
         ></textarea>
       </div>
