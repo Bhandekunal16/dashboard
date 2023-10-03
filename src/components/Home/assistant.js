@@ -6,7 +6,7 @@ import {
   math,
   convertToBinary,
   hexadecimalConvert,
-  hexToString
+  hexToString,
 } from "../../math";
 
 const Assistant = () => {

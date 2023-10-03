@@ -1,4 +1,3 @@
-
 export const output = (input, number) => {
   switch (input) {
     case "hello":
@@ -35,9 +34,8 @@ export const output = (input, number) => {
     case "log":
       return console.log(number);
 
-    case 'random number':
-      return  Math.floor(Math.random() * number);
-
+    case "random number":
+      return Math.floor(Math.random() * number);
 
     case "what is your name":
       return "my name is persnal assistant.";

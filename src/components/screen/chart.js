@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
 
-
 export default function ChartUI(props) {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
-
- 
-
 
   useEffect(() => {
     const data = {
@@ -43,10 +39,6 @@ export default function ChartUI(props) {
     setChartData(data);
     setChartOptions(options);
   }, [props.data, props.project, props.insta]);
-
- 
-
- 
 
   return (
     <div className="card">

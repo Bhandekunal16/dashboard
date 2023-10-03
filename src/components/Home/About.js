@@ -5,7 +5,7 @@ import { environment, method } from "../../env/environment";
 
 import { color } from "../../constant/color";
 import axios from "axios";
-import { notify } from '../../common/popup'
+import { notify } from "../../common/popup";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -19,7 +19,7 @@ const About = () => {
     button3();
     button4();
     button5();
-    notify('this is about me');
+    notify("this is about me");
   }, []);
 
   const [loading, setLoading] = useState(true);
@@ -126,7 +126,6 @@ const About = () => {
       return "Good night";
     }
   }
-
 
   const fetchDataFromAPI = async () => {
     try {

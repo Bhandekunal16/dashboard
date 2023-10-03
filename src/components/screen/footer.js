@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { color } from "../../constant/color";
 
-
 const Footer = () => {
   return (
     <div className="footerContent">
@@ -13,7 +12,17 @@ const Footer = () => {
         Robotic<span style={{ color: "silver" }}>'s</span>
       </Link>
 
-      <Link to="/assistant" style={{color: "orange", padding: "5px 5px", textDecoration: "none", float: "right"}}>Persnal Assistant</Link>
+      <Link
+        to="/assistant"
+        style={{
+          color: "orange",
+          padding: "5px 5px",
+          textDecoration: "none",
+          float: "right",
+        }}
+      >
+        Persnal Assistant
+      </Link>
     </div>
   );
 };

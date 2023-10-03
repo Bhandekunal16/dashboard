@@ -31,7 +31,6 @@ export const fetchData2 = async () => {
   }
 };
 
-
 export const fetchData3 = async () => {
   try {
     const response = await fetch(
@@ -46,7 +45,7 @@ export const fetchData3 = async () => {
     console.error("Error fetching data:", error);
     throw error;
   }
-}
+};
 
 export const fetchYoutubeData = async () => {
   try {
