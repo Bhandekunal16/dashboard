@@ -109,7 +109,7 @@ const Assistant = () => {
             style={{
               backgroundColor: "#333",
               color: "white",
-              height: "55vh",
+              height: "57vh",
               width: "100vw",
               textAlign: "center",
             }}
