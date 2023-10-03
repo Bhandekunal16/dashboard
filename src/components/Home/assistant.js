@@ -1,6 +1,6 @@
 import React from "react";
-import "../Home/assitant.css";
-import { output } from "../../ouput";
+import "../Home/assistant.css";
+import { output } from "../../output";
 import {
   convertToString,
   math,
