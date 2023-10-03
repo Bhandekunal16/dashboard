@@ -33,7 +33,12 @@ const Assistant = () => {
         tableResult.nine +
         "," +
         tableResult.ten;
-    } else {
+    } 
+    else if(input.value ="log"){
+      mathematical.style.display = "block";
+      const log = output(input.value, mathematical.value);
+    }
+    else {
       const methodResult = output(input.value);
       ans.innerHTML = methodResult;
     }

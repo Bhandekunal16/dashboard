@@ -33,6 +33,9 @@ export const output = (input, number) => {
     case "sec":
       return new Date().getSeconds();
 
+    case "log":
+      return console.log(number);
+
     case "what is your name":
       return "my name is persnal assistant.";
 
@@ -41,14 +44,13 @@ export const output = (input, number) => {
 
     case "about":
       return "you are in the dashboard portal of the robotec. here you find many things like who will devlop, what services we have what will they work, how will they help you. enjoy your journey in the portal.";
-    
-    case 'service':
-      return 'Go to the main menu, then click on services here you can found service that help you in regular life'
 
-    case 'Home':
-      return 'click on Home if you want to home page.'
-      default:
-      console.log("in else condition");
+    case "service":
+      return "Go to the main menu, then click on services here you can found service that help you in regular life";
+
+    case "Home":
+      return "click on Home if you want to home page.";
+    default:
       return "good to see you";
   }
 };
