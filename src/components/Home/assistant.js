@@ -1,6 +1,7 @@
 import React from "react";
 import "../Home/assistant.css";
 import { output } from "../../output";
+import { color } from "../../constant/color";
 import {
   convertToString,
   math,
@@ -10,6 +11,7 @@ import {
   calculation,
   octal,
 } from "../../math";
+
 
 const Assistant = () => {
   function terminal() {
@@ -102,7 +104,9 @@ const Assistant = () => {
   return (
     <>
       <div id="container">
-        <h1>Personal assistant</h1>
+        <h1>
+          Personal assistant
+        </h1>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             id="output"
@@ -122,7 +126,7 @@ const Assistant = () => {
             style={{
               display: "none",
               backgroundColor: "#333",
-              color: "white",
+              color: color().sec,
               height: "auto",
               width: "100vw",
               alignItems: "center",
@@ -135,7 +139,7 @@ const Assistant = () => {
           onInput={terminal}
           style={{
             backgroundColor: "#333",
-            color: "white",
+            color: color().header,
             height: "auto",
             width: "100vw",
           }}
