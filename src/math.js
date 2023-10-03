@@ -82,10 +82,32 @@ function hexStringToAscii(hexString) {
 
 export const calculation = (input) => {
   try {
-    const output = eval(input)
+    const output = eval(input);
     console.log(output);
     return output;
   } catch (error) {
     return error;
+  }
+};
+
+export const octal = (input) => {
+  try {
+    if (typeof input === "number") {
+      input = input.toString();
+    }
+
+    let octalNumber = "";
+
+    for (let i = 0; i < input.length; i++) {
+      const char = input[i];
+
+      const octalChar = char.charCodeAt(0).toString(8);
+
+      octalNumber += octalChar;
+    }
+
+    return octalNumber;
+  } catch (error) {
+    return error.message;
   }
 };
