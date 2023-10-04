@@ -405,7 +405,7 @@ export const output = (input, number) => {
         <p> return this.catsService.findOne(uuid); </p>
       <p> } </p>`;
 
-    case "nest ValidationPipe" :
+    case "nest ValidationPipe":
       return `
       <p style="color: green"> import { PipeTransform, Injectable, ArgumentMetadata } from '@nestjs/common'; </p>
 
@@ -414,7 +414,60 @@ export const output = (input, number) => {
         <p> transform(value: any, metadata: ArgumentMetadata) { </p>
           <p> return value; </p>
         <p> } </p>
-      <p> } </p>`
+      <p> } </p>
+      
+
+      <p style="color: green"> metadata for use</p>
+      <p> export interface ArgumentMetadata { </p>
+        <p> type: 'body' | 'query' | 'param' | 'custom'; </p>
+        <p> metatype?: Type<unknown>; </p>
+        <p> data?: string; </p>
+      <p> } </p>`;
+
+    case "nest Object schema validation":
+      return `
+        // install zod first
+        <h1 style="color :red"> npm install --save zod </h1> 
+
+        <p style="color: green"> import { BadRequestException } from '@nestjs/common'; </p>
+        <p style="color: green"> import { ZodObject } from 'zod'; </p>
+
+        <p> export class ZodValidationPip { </p>
+        <p style="color: yellow"> constructor(private schema) {} </p>
+
+        <p> transform(value, metadata) { </p>
+        <p> try { </p>
+        <p> this.schema.parse(value); </p>
+        <p> } catch (error) { </p>
+        <p> throw new BadRequestException('Validation failed'); </p>
+        <p> } </p>
+        <p> return value; </p>
+        <p> } </p>
+        <p> } </p>
+
+
+        <p>object file for validation</p>
+        <p style="color: green"> import { z } from 'zod'; </p>
+
+        <p> export const createCatSchema = z </p>
+        <p> .object({ </p>
+        <p> name: z.string(), </p>
+        <p> age: z.number(), </p>
+        <p> breed: z.string(), </p>
+        <p> }) </p>
+        <p> .required(); </p>
+
+        <p> export type CreateCatDto = z.infer<typeof createCatSchema>; </p>
+
+        <p> use in the controller</p>
+        <p> @Post() </p>
+        <p> @Bind(Body()) </p>
+        <p> @UsePipes(new ZodValidationPipe(createCatSchema)) </p>
+        <p> async create(createCatDto) { </p>
+        <p> this.catsService.create(createCatDto); </p>
+        <p> } </p>
+
+        `;
 
     default:
       return "good to see you";
