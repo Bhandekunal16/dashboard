@@ -356,7 +356,7 @@ export const output = (input, number) => {
     case "nest BadRequestException":
       return `<p> throw new BadRequestException('Something bad happened', { cause: new Error(), description: 'Some error description' }) </p>`;
 
-    case "nest ":
+    case "nest http-exception.filter":
       return `
       <p style="color: green"> import { Catch, HttpException } from '@nestjs/common'; </p>
 
