@@ -178,8 +178,8 @@ export const output = (input, number) => {
 
     case "nest main.ts ex":
       return `
-      <p>import { NestFactory } from '@nestjs/core';</p>
-      <p>import { AppModule } from './app.module';</P>
+      <p style="color:green">import { NestFactory } from '@nestjs/core';</p>
+      <p style="color:green">import { AppModule } from './app.module';</P>
       
       <P>async function bootstrap() {</P>
       <P> const app = await NestFactory.create(AppModule);</P>
@@ -193,7 +193,7 @@ export const output = (input, number) => {
 
     case "nest app.controller ex":
       return `
-      <p>import { Controller, Get } from '@nestjs/common';</p>
+      <p style="color:green">import { Controller, Get } from '@nestjs/common';</p>
       <p> @Controller('cats')</P>
       <p> export class CatsController { </p>
       <p> @Get() </p>
@@ -204,10 +204,18 @@ export const output = (input, number) => {
 
     case "nest @Request ex":
       return ` 
-      <p> import { Request } from 'express'; </p>
+      <p style="color:green"> import { Request } from 'express'; </p>
       <p> @Get() </p>
       <p> findAll(@Req() request: Request): string { </p>
       <p> return 'This action returns all cats'; </p>
+      <p> } </p>`;
+
+    case "nest route":
+      return `
+      <p style="color:green"> 'get/all' is route here </p>
+      <p> @Get('get/all') </p>
+      <p> findAll() { </p>
+        <p> return 'This route uses a wildcard'; </p>
       <p> } </p>`;
 
     default:
