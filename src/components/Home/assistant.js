@@ -10,8 +10,9 @@ import {
   hexToString,
   calculation,
   octal,
+  octalToString,
+  convertToScientificNotation,
 } from "../../math";
-
 
 const Assistant = () => {
   function terminal() {
@@ -94,6 +95,18 @@ const Assistant = () => {
         ans.innerHTML = oct;
         break;
 
+      case "convert octal to string":
+        mathematical.style.display = "block";
+        const stringOctal = octalToString(mathematical.value);
+        ans.innerHTML = stringOctal;
+        break;
+
+      case "convert to scientific notation":
+        mathematical.style.display = "block";
+        const sci = convertToScientificNotation(mathematical.value);
+        ans.innerHTML = sci;
+        break;
+
       default:
         const methodResult = output(input.value);
         ans.innerHTML = methodResult;
@@ -104,9 +117,7 @@ const Assistant = () => {
   return (
     <>
       <div id="container">
-        <h1>
-          Personal assistant
-        </h1>
+        <h1>Personal assistant</h1>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             id="output"
@@ -120,7 +131,6 @@ const Assistant = () => {
           ></div>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          
           <textarea
             id="math"
             onInput={terminal}

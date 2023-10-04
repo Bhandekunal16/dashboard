@@ -131,3 +131,28 @@ export const octal = (input) => {
     return error.message;
   }
 };
+
+export const octalToString = (input) => {
+  try {
+    const octalGroups = input.match(/.{1,3}/g);
+    let resultString = "";
+    octalGroups.forEach((octalGroup) => {
+      const charCode = parseInt(octalGroup, 8);
+      const char = String.fromCharCode(charCode);
+      resultString += char;
+    });
+    return resultString;
+  } catch (error) {
+    return error.message;
+  }
+};
+
+export const convertToScientificNotation = (input) => {
+  console.log(input);
+  const value = parseFloat(input)
+  if (typeof value != "number") {
+    return "Invalid input";
+  }
+  const scientificNotation = value.toExponential(2);
+  return scientificNotation;
+};
