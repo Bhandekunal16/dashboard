@@ -55,7 +55,6 @@ const Assistant = () => {
       case "random number":
         mathematical.style.display = "block";
         const random = output(input.value, mathematical.value);
-        console.log(test);
         ans.innerHTML = random;
         break;
 
