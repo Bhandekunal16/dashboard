@@ -191,6 +191,17 @@ export const output = (input, number) => {
     case "nest run project":
       return `npm run start:dev`;
 
+    case "nest app.controller ex":
+      return `
+      <p>import { Controller, Get } from '@nestjs/common';</p>
+      <p> @Controller('cats')</P>
+      <p> export class CatsController { </p>
+      <p> @Get() </p>
+      <p> findAll(): string { </p>
+      <p>  return 'This action returns all cats'; </p>
+      <p> } </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }

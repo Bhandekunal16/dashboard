@@ -117,14 +117,20 @@ const Assistant = () => {
     <>
       <div id="container">
         <h1 style={{ backgroundColor: color().header }}>Personal assistant</h1>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "#333",
+          }}
+        >
           <div
             id="output"
             style={{
               backgroundColor: "#333",
               color: "white",
               height: "57vh",
-              width: "100vw",
+              width: "80vw",
               overflow: "auto",
             }}
           ></div>
