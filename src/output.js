@@ -218,6 +218,14 @@ export const output = (input, number) => {
         <p> return 'This route uses a wildcard'; </p>
       <p> } </p>`;
 
+    case "nest status code ex":
+      return `
+      <p> @Post() </p>
+      <p> @HttpCode(204) </p>
+      <p> create() { </p>
+        <p> return 'This action adds a new cat'; </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
