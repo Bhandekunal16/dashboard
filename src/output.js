@@ -275,6 +275,13 @@ export const output = (input, number) => {
       <p> } </p>
       `;
 
+    case "nest Asynchronicity":
+      return `
+      <p> @Get() </p>
+      <p> findAll(): Observable<any[]> { </p>
+        <p> return of([]); </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
