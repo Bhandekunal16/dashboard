@@ -107,7 +107,36 @@ export const output = (input, number) => {
       <td>Row 3, Cell 3</td>
   </tr>
 </table>`;
+    case "order list UI":
+      return `
+      <code><pre>
+      &lt;ol&gt
+      &lt;li&gtItem 1&lt;/li&gt
+      &lt;li&gtItem 2&lt;/li&gt
+      &lt;li&gtItem 3&lt;/li&gt
+    &lt;/ol&gt
+      </pre></code>
+     
+    <ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>`;
 
+    case "unordered list UI":
+      return `<code><pre>
+    &lt;ul&gt
+      &lt;li&gtItem 1&lt;/li&gt
+      &lt;li&gtItem 2&lt;/li&gt
+      &lt;li&gtItem 3&lt;/li&gt
+    &lt;/ul&gt
+      </pre></code>
+     
+    <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>`;
     default:
       return "good to see you";
   }
