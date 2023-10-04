@@ -246,6 +246,14 @@ export const output = (input, number) => {
       <P> } </P>
       `;
 
+    case "nest route @param":
+      return `
+      <p> @Get(':id') </p>
+      <p> findOne(@Param() params: any): string { </p>
+        <p> console.log(params.id); </p>
+        <p> return 'This action returns a # "param.id" cat'; <p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
