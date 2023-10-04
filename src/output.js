@@ -235,6 +235,17 @@ export const output = (input, number) => {
       <p> } </p>
       `;
 
+    case "nest redirection":
+      return `
+      <p> @Get() </p>
+      <p> @Redirect('https://nestjs.com', 301) </p>
+      <P> getDocs(@Query('version') version) { </P>
+        <P> if (version && version === '5') { </P>
+        <P> return { url: 'https://docs.nestjs.com/v5/' }; </P>
+        <P> } </P>
+      <P> } </P>
+      `;
+
     default:
       return "good to see you";
   }
