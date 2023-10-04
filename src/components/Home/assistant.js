@@ -116,7 +116,7 @@ const Assistant = () => {
   return (
     <>
       <div id="container">
-        <h1 style={{backgroundColor: color().header}}>Personal assistant</h1>
+        <h1 style={{ backgroundColor: color().header }}>Personal assistant</h1>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             id="output"
@@ -125,8 +125,10 @@ const Assistant = () => {
               color: "white",
               height: "57vh",
               width: "100vw",
+              overflow: "auto", 
             }}
-          ></div>
+          >
+          </div>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <textarea
