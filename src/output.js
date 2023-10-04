@@ -254,6 +254,16 @@ export const output = (input, number) => {
         <p> return 'This action returns a # "param.id" cat'; <p>
       <p> } </p>`;
 
+    case "nest subdomain route":
+      return `
+      <p style="color: green"> @Controller({ host: 'admin.example.com' }) </p>
+      <p> export class AdminController { </p>
+        <p> @Get() </p>
+        <p> index(): string { </p>
+          <p> return 'Admin page'; </p>
+        <p> } </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
