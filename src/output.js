@@ -405,6 +405,17 @@ export const output = (input, number) => {
         <p> return this.catsService.findOne(uuid); </p>
       <p> } </p>`;
 
+    case "nest ValidationPipe" :
+      return `
+      <p style="color: green"> import { PipeTransform, Injectable, ArgumentMetadata } from '@nestjs/common'; </p>
+
+      <p style="color: yellow"> @Injectable() </p>
+      <p> export class ValidationPipe implements PipeTransform { </p>
+        <p> transform(value: any, metadata: ArgumentMetadata) { </p>
+          <p> return value; </p>
+        <p> } </p>
+      <p> } </p>`
+
     default:
       return "good to see you";
   }
