@@ -202,6 +202,13 @@ export const output = (input, number) => {
       <p> } </p>
       <p> } </p>`;
 
+    case "nest @Request ex":
+      return ` 
+      <p> @Get() </p>
+      <p> findAll(@Req() request: Request): string { </p>
+      <p> return 'This action returns all cats'; </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
