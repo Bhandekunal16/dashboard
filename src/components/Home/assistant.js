@@ -125,10 +125,9 @@ const Assistant = () => {
               color: "white",
               height: "57vh",
               width: "100vw",
-              overflow: "auto", 
+              overflow: "auto",
             }}
-          >
-          </div>
+          ></div>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <textarea
