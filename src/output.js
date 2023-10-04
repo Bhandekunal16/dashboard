@@ -282,6 +282,40 @@ export const output = (input, number) => {
         <p> return of([]); </p>
       <p> } </p>`;
 
+    case "nest dto":
+      return `
+      <p style="color: green"> export class CreateCatDto { </p>
+        <p> name: string;</p>
+        <p> age: number;</p>
+        <p> breed: string;</p>
+      <p> } </p>
+
+      <p style= "color: yellow"> use in the controller</p>
+      <p> @Post() </p>
+      <p> async create(@Body() createCatDto: CreateCatDto) { </p>
+      <p> return 'This action adds a new cat'; </p>
+      <p> } </p>
+      `;
+
+    case "nest service ex":
+      return `
+      <p style="color: green"> import { Injectable } from '@nestjs/common'; </p>
+      <p style="color: green">import { Cat } from './interfaces/cat.interface';</p>
+
+      <p style="color: yellow"> @Injectable() </p>
+      <p> export class CatsService { </p>
+      <p> private readonly cats: Cat[] = []; </p>
+
+      <p> create(cat: Cat) { </p>
+      <p> this.cats.push(cat); </p>
+      <p> } </p>
+
+      <p> findAll(): Cat[] { </p>
+      <p> return this.cats; </p>
+      <p> } <p>
+      <p> } <p>
+      `;
+
     default:
       return "good to see you";
   }
