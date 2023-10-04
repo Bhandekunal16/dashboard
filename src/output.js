@@ -388,6 +388,23 @@ export const output = (input, number) => {
       <p> } </p>
       `;
 
+    case "nest ParseIntPipe":
+      return `
+      <p> @Get(':id') </p>
+      <p> async findOne( </p>
+        <p> @Param('id', new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE })) </p>
+        <p> id: number, </p>
+      <p> ) { </p>
+        <p> return this.catsService.findOne(id); </p>
+      <p> } </p>`;
+
+    case "nest ParseUUIDPipe":
+      return `
+      <p> @Get(':uuid') </p>
+      <p> async findOne(@Param('uuid', new ParseUUIDPipe()) uuid: string) { </p>
+        <p> return this.catsService.findOne(uuid); </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
