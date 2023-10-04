@@ -120,9 +120,11 @@ const Assistant = () => {
           ></div>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
+          
           <textarea
             id="math"
             onInput={terminal}
+            placeholder="Enter number"
             style={{
               display: "none",
               backgroundColor: "#333",
@@ -136,6 +138,7 @@ const Assistant = () => {
 
         <textarea
           id="input"
+          placeholder="Enter the command"
           onInput={terminal}
           style={{
             backgroundColor: "#333",
