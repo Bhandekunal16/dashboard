@@ -264,6 +264,17 @@ export const output = (input, number) => {
         <p> } </p>
       <p> } </p>`;
 
+    case "nest subdomain route @HostParam":
+      return `
+      <p style="color: green"> @Controller({ host: ':account.example.com' }) <p>
+      <p> export class AccountController { </p>
+        <p> @Get() </p>
+        <p> getInfo(@HostParam('account') account: string) { </p>
+          <p> return account; </p>
+        <p> } </p>
+      <p> } </p>
+      `;
+
     default:
       return "good to see you";
   }
