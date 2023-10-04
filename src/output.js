@@ -168,8 +168,26 @@ export const output = (input, number) => {
        
        <input type="submit" value="Submit">
    </form>
-   
    `;
+
+    case "nest install cli":
+      return `npm i -g @nestjs/cli`;
+
+    case "nest generate project":
+      return `nest new project-name`;
+
+    case "nest main.ts ex":
+      return `
+      <p>import { NestFactory } from '@nestjs/core';</p>
+      <p>import { AppModule } from './app.module';</P>
+      
+      <P>async function bootstrap() {</P>
+      <P> const app = await NestFactory.create(AppModule);</P>
+      <P> await app.listen(3000);</P>
+      <P>  }</P>
+      <P>
+      bootstrap();</P>`;
+
     default:
       return "good to see you";
   }
