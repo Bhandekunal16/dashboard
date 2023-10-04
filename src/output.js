@@ -226,6 +226,15 @@ export const output = (input, number) => {
         <p> return 'This action adds a new cat'; </p>
       <p> } </p>`;
 
+    case "nest header ex":
+      return `
+      <p> @Post() </p>
+      <p> @Header('Cache-Control', 'none') </p>
+      <p> create() { </p>
+      <p> return 'This action adds a new cat'; </p>
+      <p> } </p>
+      `;
+
     default:
       return "good to see you";
   }
