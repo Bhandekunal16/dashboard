@@ -204,6 +204,7 @@ export const output = (input, number) => {
 
     case "nest @Request ex":
       return ` 
+      <p> import { Request } from 'express'; </p>
       <p> @Get() </p>
       <p> findAll(@Req() request: Request): string { </p>
       <p> return 'This action returns all cats'; </p>
