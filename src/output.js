@@ -377,6 +377,15 @@ export const output = (input, number) => {
         <p> }); </p>
         <p> } </p>
       <p> } </p>
+
+
+      <p>use of filter in controller</p>
+      <p style="color: yellow"> @Post() <p>
+      <p> @UseFilters(new HttpExceptionFilter()) </p>
+      <p> @Bind(Body()) </p>
+      <p> async create(createCatDto) { </p>
+      <p> throw new ForbiddenException(); </p>
+      <p> } </p>
       `;
 
     default:
