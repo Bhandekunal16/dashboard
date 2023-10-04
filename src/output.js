@@ -316,6 +316,18 @@ export const output = (input, number) => {
       <p> } <p>
       `;
 
+    case "nest constructor":
+      return `<p style="color : yellow"> constructor(private catsService: CatsService) {} <p>`;
+
+    case "nest optional provider":
+      return `
+      <p style="color: green"> import { Injectable, Optional, Inject } from '@nestjs/common'; </p>
+
+      <p style="color: yellow"> @Injectable() </p>
+      <p> export class HttpService<T> { </p>
+         <p> constructor(@Optional() @Inject('HTTP_OPTIONS') private httpClient: T) {} </p>
+      <p> } </p>`;
+
     default:
       return "good to see you";
   }
