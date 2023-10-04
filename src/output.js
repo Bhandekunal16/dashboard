@@ -202,7 +202,7 @@ export const output = (input, number) => {
       <p> } </p>
       <p> } </p>`;
 
-    case "nest @Request ex":
+    case "nest @Request ":
       return ` 
       <p style="color:green"> import { Request } from 'express'; </p>
       <p> @Get() </p>
@@ -218,7 +218,7 @@ export const output = (input, number) => {
         <p> return 'This route uses a wildcard'; </p>
       <p> } </p>`;
 
-    case "nest status code ex":
+    case "nest status code ":
       return `
       <p> @Post() </p>
       <p> @HttpCode(204) </p>
@@ -226,7 +226,7 @@ export const output = (input, number) => {
         <p> return 'This action adds a new cat'; </p>
       <p> } </p>`;
 
-    case "nest header ex":
+    case "nest header ":
       return `
       <p> @Post() </p>
       <p> @Header('Cache-Control', 'none') </p>
