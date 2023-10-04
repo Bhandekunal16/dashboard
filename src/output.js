@@ -188,6 +188,9 @@ export const output = (input, number) => {
       <P>
       bootstrap();</P>`;
 
+    case "nest run project":
+      return `npm run start:dev`;
+
     default:
       return "good to see you";
   }
