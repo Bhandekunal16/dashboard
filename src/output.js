@@ -226,7 +226,7 @@ export const output = (input, number) => {
         <p> return 'This action adds a new cat'; </p>
       <p> } </p>`;
 
-    case "nest header ":
+    case "nest header":
       return `
       <p> @Post() </p>
       <p> @Header('Cache-Control', 'none') </p>
