@@ -350,6 +350,35 @@ export const output = (input, number) => {
              <p> }) </p>
         <p> export class AppModule {} </p>`;
 
+    case "nest HttpException":
+      return `<p> throw new HttpException('Forbidden', HttpStatus.FORBIDDEN); </p>`;
+
+    case "nest BadRequestException":
+      return `<p> throw new BadRequestException('Something bad happened', { cause: new Error(), description: 'Some error description' }) </p>`;
+
+    case "nest ":
+      return `
+      <p style="color: green"> import { Catch, HttpException } from '@nestjs/common'; </p>
+
+      <p> @Catch(HttpException) </p>
+      <p> export class HttpExceptionFilter { </p>
+      <p> catch(exception, host) { </p>
+      <p> const ctx = host.switchToHttp(); </p>
+      <p> const response = ctx.getResponse(); </p>
+      <p> const request = ctx.getRequest(); </p>
+      <p> const status = exception.getStatus(); </p>
+
+      <p> response </p>
+        <p> .status(status) </p>
+        <p> .json({ </p>
+          <p> statusCode: status, </p>
+          <p> timestamp: new Date().toISOString(), </p>
+          <p> path: request.url, </p>
+        <p> }); </p>
+        <p> } </p>
+      <p> } </p>
+      `;
+
     default:
       return "good to see you";
   }
