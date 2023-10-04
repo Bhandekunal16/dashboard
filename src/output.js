@@ -328,6 +328,28 @@ export const output = (input, number) => {
          <p> constructor(@Optional() @Inject('HTTP_OPTIONS') private httpClient: T) {} </p>
       <p> } </p>`;
 
+    case "nest property-base injection":
+      return `
+      <p style="color: green"> import { Injectable, Inject } from '@nestjs/common'; </p>
+
+      <p style="color: yellow"> @Injectable() </p>
+      <p> export class HttpService<T> { </p>
+        <p style="color: yellow"> @Inject('HTTP_OPTIONS') </p>
+        <p> private readonly httpClient: T; </p>
+      <p> } </p>`;
+
+    case "nest provider":
+      return `
+      <p style="color: green"> import { Module } from '@nestjs/common';</p>
+      <p style="color: green"> import { CatsController } from './cats/cats.controller';</p>
+      <p style="color: green"> import { CatsService } from './cats/cats.service';</p>
+
+      <p> @Module({ </p>
+        <p> controllers: [CatsController],</p>
+        <p> providers: [CatsService], </p>
+             <p> }) </p>
+        <p> export class AppModule {} </p>`;
+
     default:
       return "good to see you";
   }
