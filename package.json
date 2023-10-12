@@ -21,6 +21,12 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
+    "robotic-binary-converter": "^0.0.3",
+    "robotic-hexadecimal-converter": "^0.0.1",
+    "robotic-math": "^0.0.1",
+    "robotic-octal-converter": "^0.0.1",
+    "robotic-random-number": "^0.0.1",
+    "robotic-scientific-notation-number": "^0.0.1",
     "serve": "^14.2.1",
     "web-vitals": "^2.1.4"
   },

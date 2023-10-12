@@ -121,17 +121,18 @@ const Assistant = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
           }}
         >
           <div
             id="output"
             style={{
-              backgroundColor: "#333",
+              backgroundColor: color().primary,
               color: "white",
               height: "57vh",
               width: "80vw",
               overflow: "auto",
+
             }}
           ></div>
         </div>
@@ -142,7 +143,7 @@ const Assistant = () => {
             placeholder="Enter number"
             style={{
               display: "none",
-              backgroundColor: "#333",
+              backgroundColor: color().primary,
               color: color().sec,
               height: "auto",
               width: "100vw",
@@ -156,7 +157,7 @@ const Assistant = () => {
           placeholder="Enter the command"
           onInput={terminal}
           style={{
-            backgroundColor: "#333",
+            backgroundColor: color().primary,
             color: color().header,
             height: "auto",
             width: "100vw",
