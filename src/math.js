@@ -149,7 +149,7 @@ export const octalToString = (input) => {
 
 export const convertToScientificNotation = (input) => {
   console.log(input);
-  const value = parseFloat(input)
+  const value = parseFloat(input);
   if (typeof value != "number") {
     return "Invalid input";
   }
