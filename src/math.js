@@ -28,7 +28,7 @@ export const convertToBinary = (input) => {
     let binary = "";
     for (let i = 0; i < input.length; i++) {
       let charCode = input.charCodeAt(i).toString(2);
-      binary += padLeft(charCode, 8); // Ensure 8-bit representation
+      binary += padLeft(charCode, 8); 
     }
     return binary;
   } catch (error) {
