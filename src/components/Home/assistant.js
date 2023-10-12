@@ -132,7 +132,6 @@ const Assistant = () => {
               height: "57vh",
               width: "80vw",
               overflow: "auto",
-
             }}
           ></div>
         </div>

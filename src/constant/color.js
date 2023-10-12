@@ -4,6 +4,5 @@ export const color = () => {
     sec: "#00C6CF",
     text: "#D3FBD8",
     header: "#007D5C",
-
   };
 };
