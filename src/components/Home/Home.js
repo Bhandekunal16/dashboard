@@ -158,7 +158,7 @@ const Home = () => {
 
       <div
         style={{
-          width: "100vw",
+          width: "auto",
           height: "auto",
           paddingTop: "5%",
         }}
