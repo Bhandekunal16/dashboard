@@ -53,7 +53,7 @@ const Assistant = () => {
         break;
 
       case "random number":
-        mathematical.style.display = "block";
+        // mathematical.style.display = "block";
         const random = output(input.value, mathematical.value);
         ans.innerHTML = random;
         break;

@@ -25,8 +25,9 @@
     "robotic-hexadecimal-converter": "^0.0.1",
     "robotic-math": "^0.0.1",
     "robotic-octal-converter": "^0.0.1",
-    "robotic-random-number": "^0.0.1",
+    "robotic-random-number": "^0.0.5",
     "robotic-scientific-notation-number": "^0.0.1",
+    "robotic-time": "^0.0.9",
     "serve": "^14.2.1",
     "web-vitals": "^2.1.4"
   },

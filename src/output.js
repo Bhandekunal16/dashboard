@@ -1,4 +1,7 @@
-export const output = (input, number) => {
+import { number } from "robotic-random-number";
+import { time } from "robotic-time";
+
+export const output = (input, Number) => {
   switch (input) {
     case "hello":
       console.log("in the if condition");
@@ -8,34 +11,35 @@ export const output = (input, number) => {
       return "good to see you";
 
     case "time":
-      return new Date();
+      return time().localDate;
 
     case "date":
-      return new Date().getDate();
+      return time().date;
 
     case "day":
-      return new Date().getDay();
+      return time().day;
 
     case "year":
-      return new Date().getFullYear();
+      return time().year;
 
     case "month":
-      return new Date().getMonth();
+      return time().month;
 
     case "hour":
-      return new Date().getHours();
+      return time().hour;
 
     case "minute":
-      return new Date().getMinutes();
+      return time().min;
 
     case "sec":
-      return new Date().getSeconds();
+      return time().sec;
 
     case "log":
-      return console.log(number);
+      return console.log(Number);
 
     case "random number":
-      return Math.floor(Math.random() * number);
+      console.log(number());
+      return number();
 
     case "what is your name":
       return "my name is persnal assistant.";
