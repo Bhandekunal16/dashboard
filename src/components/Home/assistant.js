@@ -53,7 +53,6 @@ const Assistant = () => {
         break;
 
       case "random number":
-        // mathematical.style.display = "block";
         const random = output(input.value, mathematical.value);
         ans.innerHTML = random;
         break;
@@ -129,7 +128,7 @@ const Assistant = () => {
             style={{
               backgroundColor: color().primary,
               color: "white",
-              height: "57vh",
+              height: "71vh",
               width: "80vw",
               overflow: "auto",
             }}
