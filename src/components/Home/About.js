@@ -19,6 +19,7 @@ const About = () => {
     button3();
     button4();
     button5();
+    button6();
     notify("this is about me");
   }, []);
 
@@ -106,6 +107,24 @@ const About = () => {
       );
       console.log(response);
       const button = document.getElementById("button5");
+      button.innerHTML = response.data;
+    } catch (error) {
+      setError("Error fetching data");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const button6 = async () => {
+    try {
+      const response = await axios.post(
+        `https://${environment.base_url}/get/ButtonUI`,
+        {
+          data: `<a href="/library" style= "text-decoration: none"> click </a>`,
+        }
+      );
+      console.log(response);
+      const button = document.getElementById("button6");
       button.innerHTML = response.data;
     } catch (error) {
       setError("Error fetching data");
@@ -363,6 +382,22 @@ const About = () => {
         <p style={{ marginLeft: "10%", color: color().text }}>
           Role: Backend/Frontend Lead & Project Management
         </p>
+      </div>
+
+      <div
+        style={{
+          backgroundColor: color().primary,
+          boxShadow: "5px 5px 20px rgba(0, 0, 0, 0.5)",
+          width: "90vw",
+          padding: "2%",
+          borderRadius: "10px",
+          marginTop: "2rem",
+        }}
+      >
+        <p style={{ marginLeft: "10%", color: color().text }}>
+          Javascript library
+        </p>
+        <div style={{ textAlign: "center" }} id="button6"></div>
       </div>
     </div>
   );
