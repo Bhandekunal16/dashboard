@@ -10,10 +10,11 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.post(
-        `${method.http}://${environment.base_url}/get/ButtonUI`,
+        `https://${environment.base_url}/get/ButtonUI`,
         {
           data: `Send Email`,
         }
@@ -21,6 +22,7 @@ const Contact = () => {
       console.log(response);
       const button = document.getElementById("submit");
       button.innerHTML = response.data;
+      console.log(response.data);
     } catch (error) {
       setError("Error fetching data");
     } finally {
@@ -45,7 +47,6 @@ const Contact = () => {
 
     try {
       const response = await sendEmail(emailData);
-      // Handle success, e.g., show a success message
       console.log("Email sent successfully:", response);
 
       // Clear the form
@@ -62,7 +63,7 @@ const Contact = () => {
   const sendEmail = async (data) => {
     try {
       const response = await fetch(
-        `${method.http}://${environment.base_url}/message/send-email`,
+        `https://${environment.base_url}/message/send-email`,
         {
           method: "POST",
           headers: {
@@ -104,6 +105,7 @@ const Contact = () => {
           onChange={handleInputChange}
         ></textarea>
         <br />
+
         <div id="submit" type="submit"></div>
       </form>
     </div>
