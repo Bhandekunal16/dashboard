@@ -2,11 +2,12 @@ import React from "react";
 import "../Home/assistant.css";
 import { output } from "../../output";
 import { color } from "../../constant/color";
-import { math, convertToScientificNotation } from "../../math";
+import { math} from "../../math";
 import { convertToBinary, convertToString } from "robotic-binary-converter";
 import { hexadecimalConvert, hexToString } from "robotic-hexadecimal-converter";
 import { octal, octalToString } from "robotic-octal-converter";
 import { calculation } from "robotic-math";
+import { convertToScientificNotation } from "robotic-scientific-notation-number";
 
 const Assistant = () => {
   function terminal() {
