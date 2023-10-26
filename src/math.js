@@ -1,3 +1,5 @@
+
+
 export const math = (number, input) => {
   try {
     console.log(number, input);

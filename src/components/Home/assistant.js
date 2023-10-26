@@ -3,9 +3,7 @@ import "../Home/assistant.css";
 import { output } from "../../output";
 import { color } from "../../constant/color";
 import {
-  convertToString,
   math,
-  convertToBinary,
   hexadecimalConvert,
   hexToString,
   calculation,
@@ -13,6 +11,7 @@ import {
   octalToString,
   convertToScientificNotation,
 } from "../../math";
+import {convertToBinary, convertToString} from 'robotic-binary-converter'
 
 const Assistant = () => {
   function terminal() {
