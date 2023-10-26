@@ -35,7 +35,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
@@ -53,7 +53,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
@@ -71,7 +71,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
@@ -90,7 +90,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
@@ -109,7 +109,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
@@ -128,7 +128,7 @@ const Library = () => {
       <div  
       style={{
             height: "auto",
-            width: "70vw",
+            width: "80vw",
             backgroundColor: color().primary,
             borderRadius: "10px",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
