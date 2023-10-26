@@ -4,14 +4,14 @@ import { output } from "../../output";
 import { color } from "../../constant/color";
 import {
   math,
-  hexadecimalConvert,
-  hexToString,
+  // hexToString,
   calculation,
   octal,
   octalToString,
   convertToScientificNotation,
 } from "../../math";
 import {convertToBinary, convertToString} from 'robotic-binary-converter'
+import { hexadecimalConvert, hexToString } from "robotic-hexadecimal-converter";
 
 const Assistant = () => {
   function terminal() {
