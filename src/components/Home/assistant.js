@@ -4,7 +4,6 @@ import { output } from "../../output";
 import { color } from "../../constant/color";
 import {
   math,
-  // hexToString,
   calculation,
   octal,
   octalToString,
