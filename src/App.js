@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route as RouteV6,
-} from "react-router-dom"; // Import Routes and Route from react-router-dom
+} from "react-router-dom"; 
 import Service from "./components/Home/service";
 import About from "./components/Home/About";
 import Contact from "./components/Home/contact";
