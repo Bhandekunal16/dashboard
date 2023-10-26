@@ -126,10 +126,11 @@ const Assistant = () => {
               height: "71vh",
               width: "80vw",
               overflow: "auto",
+              paddingTop:"1%"
             }}
           ></div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center"}}>
           <textarea
             id="math"
             onInput={terminal}
