@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footerContent">
       <Link
-        to="https://theme-pr6a747xx-bhandekunal16.vercel.app/"
+        to="https://goalplanner.vercel.app/"
         style={{ color: "orange", padding: "5px 5px", textDecoration: "none" }}
       >
         Robotic<span style={{ color: "silver" }}>'s</span>

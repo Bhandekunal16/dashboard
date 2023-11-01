@@ -15,7 +15,7 @@ const ProjectList = () => {
   const fetchDataFromAPI = async () => {
     try {
       const response = await axios.get(
-        `https://${environment.base_url}/project/getallproject`
+        `https://${environment.base_url}/project/getallproject/kunal.bhande@npstx.com`
       );
 
       console.log(response);

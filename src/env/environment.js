@@ -1,5 +1,5 @@
 export const environment = {
-  base_url: "robotec-dashboard-bnmwu8xip-bhandekunal16.vercel.app",
+  base_url: "robotec-dashboard-api.vercel.app",
   inst: "www.instagram.com/roboticdevlopments01/?igshid=YTQwZjQ0NmI0OA%3D%3D",
   Youtube: "www.youtube.com/@R0b0tics-Devel0pment",
   c: "github.com/Bhandekunal16/Logic/tree/main/c",
@@ -30,5 +30,5 @@ export const project = {
 };
 
 export const method = {
-  http: 'https',
+  http: "https",
 };
